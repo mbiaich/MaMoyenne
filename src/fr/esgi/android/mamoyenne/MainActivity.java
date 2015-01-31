@@ -1,4 +1,4 @@
-package com.example.mamoyenne;
+package fr.esgi.android.mamoyenne;
 
 import android.app.Activity;
 import android.os.Bundle;
