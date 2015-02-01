@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#9F2200"/>
+    <stroke android:width="2dp" android:color="#fff" />
+</shape>
+
+ <!--
+ //voici la description à utiliser pour un bouton rond..Mohamed..
+ Button
+android:layout_width="50dp"
+android:layout_height="50dp"
+android:background="@drawable/round_button"
+android:gravity="center_vertical|center_horizontal"
+android:text="hello"
+android:textColor="#fff" />
+
+-->

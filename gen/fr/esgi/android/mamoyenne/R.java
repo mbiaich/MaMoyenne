@@ -33,11 +33,11 @@ public final class R {
         public static final int progressBar1=0x7f080002;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int ajout_matiere=0x7f030001;
-        public static final int ajout_note=0x7f030002;
-        public static final int liste_matieres=0x7f030003;
-        public static final int notes_pour_matiere=0x7f030004;
+        public static final int activity_ajout_matiere=0x7f030000;
+        public static final int activity_ajout_note=0x7f030001;
+        public static final int activity_liste_matieres=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_notes_pour_matiere=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f070000;
