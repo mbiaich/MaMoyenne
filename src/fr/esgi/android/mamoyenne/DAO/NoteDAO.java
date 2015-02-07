@@ -2,7 +2,7 @@ package fr.esgi.android.mamoyenne.DAO;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import fr.esgi.android.mamoyenne.R;
 import fr.esgi.android.mamoyenne.tables.Note;
 import android.content.ContentValues;
 import android.content.Context;

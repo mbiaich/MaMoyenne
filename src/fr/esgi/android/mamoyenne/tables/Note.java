@@ -1,5 +1,7 @@
 package fr.esgi.android.mamoyenne.tables;
 
+import fr.esgi.android.mamoyenne.R;
+
 public class Note {
 
 	private int idNote;

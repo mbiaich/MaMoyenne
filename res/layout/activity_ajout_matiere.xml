@@ -2,37 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin" >
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="175dp"
+        android:id="@+id/ajoutMatiereLabel"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="AJOUT D&apos;UNE MATIERE" />
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:text="@string/addSubject" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/nomMatiereLabel"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nom de la matière" />
 
     <EditText
-        android:id="@+id/nomMatiere"
+        android:id="@+id/nomMatiereInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" >
+        android:ems="10" android:inputType="text">
 
         <requestFocus />
     </EditText>
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:id="@+id/coefficientMatiereLabel"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Coefficient de la matière" />
 
     <EditText
-        android:id="@+id/coefficietMatiere"
+        android:id="@+id/coefficietMatiereInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -40,8 +43,9 @@
 
     <Button
         android:id="@+id/register"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enregistrer" />
+        android:text="Enregistrer"
+        />
 
 </LinearLayout>

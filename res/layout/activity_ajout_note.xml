@@ -1,58 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@dimen/activity_vertical_margin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/ajoutMatiereLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" >
+        android:gravity="center"
+        android:text="AJOUT D&apos;UNE NOTE" />
+
+    <TextView
+        android:id="@+id/noteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note" />
+
+    <EditText
+        android:id="@+id/noteInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:inputType="numberDecimal">
 
         <requestFocus />
     </EditText>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/coefficientMatiereLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Coefficient de la note" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/coefInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:ems="10"
+        android:inputType="numberSigned"
+         />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/typeExamLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Type d'examen" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/typeExamInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:ems="10" 
+        android:inputType="text"
+        />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Enregistrer" />
 
 </LinearLayout>

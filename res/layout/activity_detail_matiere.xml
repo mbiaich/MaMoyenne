@@ -17,10 +17,12 @@
         android:text="Nom de la matiere" />
 
     <EditText
-        android:id="@+id/nomMatiere"
+        android:id="@+id/nomMatiereInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" >
+        android:ems="10" 
+        android:inputType="text"
+        >
 
         <requestFocus />
     </EditText>
@@ -32,7 +34,7 @@
         android:text="Coefficient de la matiere" />
 
     <EditText
-        android:id="@+id/coefficietMatiere"
+        android:id="@+id/coefficietMatiereInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"

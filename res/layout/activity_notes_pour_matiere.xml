@@ -5,33 +5,40 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/detailMatiereButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details Matiere" />
+
+    <Button
+        android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/ajoutMatiereLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Notes pour : " />
 
     <ListView
-        android:id="@+id/listView1"
+        android:id="@+id/noteListView"
         android:layout_width="match_parent"
         android:layout_height="180dp" >
     </ListView>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/@+idnoteLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Moyenne :" />
 
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        style="?android:attr/progressBarStyleLarge"
+    <TextView
+        android:id="@+id/averageValue"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Average Value/20"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </LinearLayout>

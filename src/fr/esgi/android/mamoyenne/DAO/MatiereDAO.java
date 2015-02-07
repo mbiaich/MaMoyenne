@@ -2,10 +2,10 @@ package fr.esgi.android.mamoyenne.DAO;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import fr.esgi.android.mamoyenne.R;
 import fr.esgi.android.mamoyenne.tables.Matiere;
 
 public class MatiereDAO extends DAOBase {

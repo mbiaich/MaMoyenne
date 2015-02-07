@@ -4,5 +4,11 @@
     <string name="app_name">MaMoyenne</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="labelGererNotes">Gérer Mes Notes</string>
+ 	<string name="addSubject">AJOUT D\'UNE MATIERE</string>
+ 	<string name="subjectNameLabel">Nom de la matière</string>
+ 	<string name="coefLabel">Coefficient de la matière</string>
+ 	<string name="register">Enregistrer</string>
+ 	
 
 </resources>
