@@ -1,6 +1,5 @@
 package fr.esgi.android.mamoyenne.tables;
 
-import fr.esgi.android.mamoyenne.R;
 
 public class Matiere {
 
@@ -19,6 +18,19 @@ public class Matiere {
 		this.coefficient = coefficient;
 	}
 	
+	
+	
+	/**
+	 * @param nom
+	 * @param coefficient
+	 */
+	public Matiere(String nom, float coefficient) {
+		this.nom = nom;
+		this.coefficient = coefficient;
+	}
+
+
+
 	public Matiere() {
 		
 	}
@@ -63,5 +75,10 @@ public class Matiere {
 	 */
 	public void setCoefficient(float coefficient) {
 		this.coefficient = coefficient;
+	}
+	
+	@Override
+	public String toString() {
+		return this.getNom();
 	}
 }

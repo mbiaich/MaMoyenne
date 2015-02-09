@@ -43,8 +43,8 @@ public class AjoutDuneMatiere extends Activity {
 	    }
 	    
 	    public void createMatiere(View v) {
-	    	EditText txtNomMatiere = (EditText) findViewById(R.id.nomMatiere);
-	    	EditText txtCoefficient = (EditText) findViewById(R.id.coefficietMatiere);
+	    	EditText txtNomMatiere = (EditText) findViewById(R.id.nomMatiereInput);
+	    	EditText txtCoefficient = (EditText) findViewById(R.id.coefficietMatiereInput);
 	    	Matiere m = new Matiere(txtNomMatiere.getText().toString(), Float.parseFloat(txtCoefficient.getText().toString()));
 	    	matiereDao.createMatiere(m);
 	    	this.startActivity(new Intent(this, ListeDesMatieres.class));

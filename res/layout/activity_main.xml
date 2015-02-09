@@ -43,6 +43,7 @@
         android:background="@drawable/bouton_arrondi"
         android:backgroundTint="@android:color/black"
         android:gravity="center"
+        android:onClick="onClick"
         android:text="Gérer Mes Notes"
         android:textColor="@android:color/white" />
   
