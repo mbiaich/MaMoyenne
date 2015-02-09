@@ -25,7 +25,7 @@
         <activity android:name="fr.esgi.android.mamoyenne.ListeDesMatieres"/>
         <activity android:name="fr.esgi.android.mamoyenne.AjoutDuneMatiere"/>
         <activity android:name="fr.esgi.android.mamoyenne.NotesPourUneMatiere"/>
-        <activity android:name="fr.esgi.android.mamoyenne.AjoutNoteMatiere"/>
+        <activity android:name="fr.esgi.android.mamoyenne.AjoutNote"/>
     </application>
 
 </manifest>

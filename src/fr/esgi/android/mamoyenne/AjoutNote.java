@@ -1,16 +1,27 @@
 package fr.esgi.android.mamoyenne;
 
+import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
+import fr.esgi.android.mamoyenne.DAO.NoteDAO;
+import fr.esgi.android.mamoyenne.tables.Matiere;
+import fr.esgi.android.mamoyenne.tables.Note;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
-public class AjoutNoteMatiere extends Activity {
+public class AjoutNote extends Activity {
 
+	private NoteDAO noteDao;
+	
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.activity_ajout_note);
+	        setContentView(R.layout.activity_ajout_matiere);
+	        noteDao = new NoteDAO(this);
+	        noteDao.open();
 	    }
 
 
@@ -31,6 +42,16 @@ public class AjoutNoteMatiere extends Activity {
 	            return true;
 	        }
 	        return super.onOptionsItemSelected(item);
+	    }
+	    
+	    public void createNote(View v) {
+	    	EditText noteValue = (EditText) findViewById(R.id.noteInput);
+	    	EditText txtCoefficient = (EditText) findViewById(R.id.coefInput);
+	    	EditText txtTypeExamInput = (EditText) findViewById(R.id.typeExamInput);
+//TODO CHANGER Note et gérer l'ID
+	    	Note n=new Note();
+	    	noteDao.createNote(n);
+	    	this.startActivity(new Intent(this, ListeDesMatieres.class));
 	    }
 
 }
