@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
+import fr.esgi.android.mamoyenne.adapters.MatiereListAdapter;
 import fr.esgi.android.mamoyenne.tables.Matiere;
 
 public class ListeDesMatieres extends ListActivity {
@@ -24,7 +25,7 @@ public class ListeDesMatieres extends ListActivity {
 		super.onCreate(savedInstanceState);
 		matiereDao = new MatiereDAO(this);
 		matiereDao.open();
-//		refresh();
+		refresh();
 		setContentView(R.layout.activity_liste_matieres);
 	}
 
@@ -55,7 +56,8 @@ public class ListeDesMatieres extends ListActivity {
 		ListView listView = (ListView) findViewById(android.R.id.list);
 		List<Matiere> matieres = matiereDao.getMatieres();
 		if (!matieres.isEmpty()) {
-
+			MatiereListAdapter adapter = new MatiereListAdapter(this, matieres);
+			setListAdapter(adapter);
 		}
 		
 	}
