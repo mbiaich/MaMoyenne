@@ -1,36 +1,62 @@
 package fr.esgi.android.mamoyenne;
 
+import java.util.List;
+
+import fr.esgi.android.mamoyenne.DAO.NoteDAO;
+import fr.esgi.android.mamoyenne.adapters.NoteListAdapter;
+import fr.esgi.android.mamoyenne.tables.Note;
 import android.app.Activity;
+import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
 
-public class NotesPourUneMatiere extends Activity {
+public class NotesPourUneMatiere extends ListActivity {
 
-	 @Override
-	    protected void onCreate(Bundle savedInstanceState) {
-	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.activity_notes_pour_matiere);
-	    }
+	private NoteDAO NoteDAO;
 
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		NoteDAO = new NoteDAO(this);
+		NoteDAO.open();
+		refresh();
+		setContentView(R.layout.activity_notes_pour_matiere);
+	}
 
-	    @Override
-	    public boolean onCreateOptionsMenu(Menu menu) {
-	        // Inflate the menu; this adds items to the action bar if it is present.
-	        getMenuInflater().inflate(R.menu.main, menu);
-	        return true;
-	    }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
 
-	    @Override
-	    public boolean onOptionsItemSelected(MenuItem item) {
-	        // Handle action bar item clicks here. The action bar will
-	        // automatically handle clicks on the Home/Up button, so long
-	        // as you specify a parent activity in AndroidManifest.xml.
-	        int id = item.getItemId();
-	        if (id == R.id.action_settings) {
-	            return true;
-	        }
-	        return super.onOptionsItemSelected(item);
-	    }
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 
+	public void frmAjoutNote(View v) {
+		this.startActivity(new Intent(this, AjoutNote.class));
+	}
+
+	public void refresh() {
+		ListView listView = (ListView) findViewById(android.R.id.list);
+		List<Note> Notes = NoteDAO.getNotes();
+		if (!Notes.isEmpty()) {
+			NoteListAdapter adapter = new NoteListAdapter(this, Notes);
+			setListAdapter(adapter);
+		}
+		
+	}
 }
