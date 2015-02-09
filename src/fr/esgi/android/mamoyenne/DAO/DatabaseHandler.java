@@ -30,8 +30,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 			NOTE_NOTE + " REAL, " +
 			NOTE_COEFFICIENT + " REAL, " +
 			NOTE_TYPEEXAMEN + " TEXT, " +
-			NOTE_IDMATIERE + " INTEGER)" +
-			"FOREIGN KEY (" + NOTE_IDMATIERE + "REFERENCES " + MATIERE_TABLE_NAME + " (" + MATIERE_ID + "));";
+			NOTE_IDMATIERE + " INTEGER," +
+			" FOREIGN KEY (" + NOTE_IDMATIERE + ") REFERENCES " + MATIERE_TABLE_NAME + " (" + MATIERE_ID + "));";
 	public static final String NOTE_TABLE_DROP = "DROP TABLE IF EXISTS " + NOTE_TABLE_NAME + ";";
 	
 	public DatabaseHandler(Context context, String name, CursorFactory factory, int version) {

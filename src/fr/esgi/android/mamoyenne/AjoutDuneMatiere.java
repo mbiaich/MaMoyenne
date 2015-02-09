@@ -1,16 +1,25 @@
 package fr.esgi.android.mamoyenne;
 
+import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
+import fr.esgi.android.mamoyenne.tables.Matiere;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 public class AjoutDuneMatiere extends Activity {
 
+	private MatiereDAO matiereDao;
+	
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.activity_ajout_matiere);
+	        matiereDao = new MatiereDAO(this);
+	        matiereDao.open();
 	    }
 
 
@@ -31,6 +40,14 @@ public class AjoutDuneMatiere extends Activity {
 	            return true;
 	        }
 	        return super.onOptionsItemSelected(item);
+	    }
+	    
+	    public void createMatiere(View v) {
+	    	EditText txtNomMatiere = (EditText) findViewById(R.id.nomMatiere);
+	    	EditText txtCoefficient = (EditText) findViewById(R.id.coefficietMatiere);
+	    	Matiere m = new Matiere(txtNomMatiere.getText().toString(), Float.parseFloat(txtCoefficient.getText().toString()));
+	    	matiereDao.createMatiere(m);
+	    	this.startActivity(new Intent(this, ListeDesMatieres.class));
 	    }
 
 }
