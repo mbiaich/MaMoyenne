@@ -24,9 +24,9 @@ public class NotesPourUneMatiere extends ListActivity {
 		super.onCreate(savedInstanceState);
 		NoteDAO = new NoteDAO(this);
 		NoteDAO.open();
+		idMatiere = getIntent().getExtras().getLong("idMatiere");
 		refresh();
 		setContentView(R.layout.activity_notes_pour_matiere);
-		idMatiere = getIntent().getExtras().getLong("idMatiere");
 	}
 
 	@Override
@@ -49,7 +49,9 @@ public class NotesPourUneMatiere extends ListActivity {
 	}
 
 	public void frmAjoutNote(View v) {
-		this.startActivity(new Intent(this, AjoutNote.class));
+		Intent i = new Intent(this, AjoutNote.class);
+		i.putExtra("idMatiere", idMatiere);
+		this.startActivity(i);
 	}
 
 	public void refresh() {

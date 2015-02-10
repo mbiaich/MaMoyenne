@@ -15,7 +15,7 @@ import android.widget.EditText;
 public class AjoutNote extends Activity {
 
 	private NoteDAO noteDao;
-	private int idMatiere;
+	private Long idMatiere;
 	
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class AjoutNote extends Activity {
 	        setContentView(R.layout.activity_ajout_note);
 	        noteDao = new NoteDAO(this);
 	        noteDao.open();
-	        idMatiere = getIntent().getExtras().getInt("idMatiere");
+	        idMatiere = getIntent().getExtras().getLong("idMatiere");
 	    }
 
 

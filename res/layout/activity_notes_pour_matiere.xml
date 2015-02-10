@@ -14,7 +14,8 @@
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:onClick="frmAjoutNote"
+        android:text="Ajouter" />
 
     <TextView
         android:id="@+id/ajoutMatiereLabel"
