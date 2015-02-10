@@ -2,10 +2,6 @@ package fr.esgi.android.mamoyenne;
 
 import java.util.List;
 
-import fr.esgi.android.mamoyenne.DAO.NoteDAO;
-import fr.esgi.android.mamoyenne.adapters.NoteListAdapter;
-import fr.esgi.android.mamoyenne.tables.Note;
-import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,17 +9,25 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
+import fr.esgi.android.mamoyenne.DAO.NoteDAO;
+import fr.esgi.android.mamoyenne.adapters.NoteListAdapter;
+import fr.esgi.android.mamoyenne.tables.Matiere;
+import fr.esgi.android.mamoyenne.tables.Note;
 
 public class NotesPourUneMatiere extends ListActivity {
 
 	private NoteDAO NoteDAO;
 	private long idMatiere;
+	private MatiereDAO matiereDao;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		NoteDAO = new NoteDAO(this);
 		NoteDAO.open();
+		matiereDao = new MatiereDAO(this);
+		matiereDao.open();
 		idMatiere = getIntent().getExtras().getLong("idMatiere");
 		refresh();
 		setContentView(R.layout.activity_notes_pour_matiere);
@@ -53,6 +57,12 @@ public class NotesPourUneMatiere extends ListActivity {
 		i.putExtra("idMatiere", idMatiere);
 		this.startActivity(i);
 	}
+	
+	public void viewDetailsMatiere(View v) {
+		Intent i = new Intent(this, DetailsMatiere.class);
+		i.putExtra("matiere", matiereDao.getMatiere(idMatiere));
+		this.startActivity(i);
+	}
 
 	public void refresh() {
 		ListView listView = (ListView) findViewById(android.R.id.list);
@@ -60,13 +70,13 @@ public class NotesPourUneMatiere extends ListActivity {
 		if (!Notes.isEmpty()) {
 			NoteListAdapter adapter = new NoteListAdapter(this, Notes);
 			setListAdapter(adapter);
-		}
-		
+		}		
 	}
 	
 	@Override
 	public void onDestroy(){
 		NoteDAO.close();
+		matiereDao.close();
 		super.onDestroy();
 	}
 }

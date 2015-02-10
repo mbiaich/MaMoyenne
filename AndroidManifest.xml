@@ -26,6 +26,7 @@
         <activity android:name="fr.esgi.android.mamoyenne.AjoutDuneMatiere"/>
         <activity android:name="fr.esgi.android.mamoyenne.NotesPourUneMatiere"/>
         <activity android:name="fr.esgi.android.mamoyenne.AjoutNote"/>
+        <activity android:name="fr.esgi.android.mamoyenne.DetailsMatiere"/>
     </application>
 
 </manifest>

@@ -1,8 +1,14 @@
 package fr.esgi.android.mamoyenne.tables;
 
+import java.io.Serializable;
 
-public class Matiere {
 
+public class Matiere implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5531217711257469916L;
 	private long idMatiere;
 	private String nom;
 	private float coefficient;

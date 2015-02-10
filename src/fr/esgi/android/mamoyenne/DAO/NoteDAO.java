@@ -96,7 +96,6 @@ public class NoteDAO extends DAOBase {
 				cursor.moveToNext();
 			}
 		}
-		System.out.println(notes.size());
 		return notes;
 	}
 

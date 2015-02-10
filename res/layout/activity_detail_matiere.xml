@@ -44,12 +44,14 @@
         android:id="@+id/modify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="updateMatiere"        
         android:text="@string/modify" />
 
     <Button
         android:id="@+id/btnFrmCreateMatiere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="deleteMatiere"
         android:text="@string/delete" />
 
 </LinearLayout>

@@ -1,9 +1,15 @@
 package fr.esgi.android.mamoyenne.tables;
 
+import java.io.Serializable;
+
 import fr.esgi.android.mamoyenne.R;
 
-public class Note {
+public class Note implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2418284722144989051L;
 	private long idNote;
 	private Float note;
 	private float coefficient;

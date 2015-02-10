@@ -7,6 +7,7 @@ import android.content.Context;
 import android.database.Cursor;
 import fr.esgi.android.mamoyenne.R;
 import fr.esgi.android.mamoyenne.tables.Matiere;
+import fr.esgi.android.mamoyenne.tables.Note;
 
 public class MatiereDAO extends DAOBase {
 
@@ -34,11 +35,22 @@ public class MatiereDAO extends DAOBase {
 	}
 
 	public void deleteMatiere(long id) {
+		mDb.delete("note", IDMATIERE + " = ?", new String[] { String.valueOf(id) });
 		mDb.delete(TABLE_NAME, IDMATIERE + " = ?",
 				new String[] { String.valueOf(id) });
 	}
+	
+	
+	public void updateMatiere(Matiere m) {
+		ContentValues value = new ContentValues();
+		value.put(NOM, m.getNom());
+		value.put(COEFFICIENT, m.getCoefficient());
+		mDb.update(TABLE_NAME, value, IDMATIERE + " = ?",
+				new String[] { String.valueOf(m.getIdMatiere()) });
+	}
 
-	public Matiere getMatiere(int idMatiere) {
+
+	public Matiere getMatiere(long idMatiere) {
 		Matiere m = new Matiere();
 		Cursor cursor = mDb.rawQuery("SELECT idMatiere, nom, coefficient "
 				+ " from " + TABLE_NAME + " where idMatiere = ?",
