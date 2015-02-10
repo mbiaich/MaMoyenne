@@ -50,9 +50,10 @@ public class NoteDAO extends DAOBase {
 		value.put(COEFFICIENT, n.getCoefficient());
 		value.put(TYPEEXAMEN, n.getTypeExamen());
 		value.put(IDMATIERE, n.getIdMatiere());
-		mDb.update(TABLE_NAME, value, IDNOTE + " + ?", new String[] {String.valueOf(n.getIdNote())});
+		mDb.update(TABLE_NAME, value, IDNOTE + " + ?",
+				new String[] { String.valueOf(n.getIdNote()) });
 	}
-	
+
 	public Note getNote(int idNote) {
 		Note n = new Note();
 		Cursor cursor = mDb.rawQuery(
@@ -68,9 +69,10 @@ public class NoteDAO extends DAOBase {
 
 	public List<Note> getNotes() {
 		List<Note> notes = new ArrayList<Note>();
-		Cursor cursor = mDb.rawQuery("SELECT idNote, note, coefficient, typeExamen, idMatiere "
+		Cursor cursor = mDb.rawQuery(
+				"SELECT idNote, note, coefficient, typeExamen, idMatiere "
 						+ " from " + TABLE_NAME, null);
-		if(cursor.moveToFirst()) {
+		if (cursor.moveToFirst()) {
 			while (!cursor.isAfterLast()) {
 				Note n = cursorToNote(cursor);
 				notes.add(n);
@@ -80,17 +82,22 @@ public class NoteDAO extends DAOBase {
 		cursor.close();
 		return notes;
 	}
-	
+
 	public List<Note> getNotes(long idMatiere) {
 		List<Note> notes = new ArrayList<Note>();
-		Cursor cursor = mDb.rawQuery("SELECT idNote, note, coefficient, typeExamen, idMatiere FROM " + TABLE_NAME + " WHERE idMatiere = ?", new String[]{Long.toString(idMatiere)});
-		if(cursor.moveToFirst()) {
-			Note n = cursorToNote(cursor);
-			notes.add(n);
-			cursor.moveToNext();
+		Cursor cursor = mDb.rawQuery(
+				"SELECT idNote, note, coefficient, typeExamen, idMatiere FROM "
+						+ TABLE_NAME + " WHERE idMatiere = ?",
+				new String[] { Long.toString(idMatiere) });
+		if (cursor.moveToFirst()) {
+			while (!cursor.isAfterLast()) {
+				Note n = cursorToNote(cursor);
+				notes.add(n);
+				cursor.moveToNext();
+			}
 		}
 		System.out.println(notes.size());
-		return notes;		
+		return notes;
 	}
 
 	private Note cursorToNote(Cursor cursor) {
