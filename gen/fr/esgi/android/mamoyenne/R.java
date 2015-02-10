@@ -28,10 +28,10 @@ public final class R {
         public static final int textview_round=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001d;
+        public static final int action_settings=0x7f08001c;
         public static final int addButton=0x7f080017;
         public static final int ajoutMatiereLabel=0x7f080000;
-        public static final int averageValue=0x7f08001a;
+        public static final int averageValue=0x7f080019;
         public static final int btnFrmCreateMatiere=0x7f08000e;
         public static final int coefInput=0x7f080008;
         public static final int coeffLabel=0x7f08000c;
@@ -40,7 +40,7 @@ public final class R {
         public static final int detailMatiereButton=0x7f080016;
         public static final int detailMatiereLabel=0x7f08000b;
         public static final int gestionNotes=0x7f080015;
-        public static final int idnoteLabel=0x7f080019;
+        public static final int idnoteLabel=0x7f080018;
         public static final int listeMatieresLabel=0x7f080012;
         public static final int messageAccueil=0x7f080013;
         public static final int modify=0x7f08000d;
@@ -49,10 +49,9 @@ public final class R {
         public static final int nomMatiereLabel=0x7f080001;
         public static final int noteInput=0x7f080007;
         public static final int noteLabel=0x7f080006;
-        public static final int noteListView=0x7f080018;
         public static final int register=0x7f080005;
-        public static final int txt_row_liste_matiere=0x7f08001b;
-        public static final int txt_row_liste_note=0x7f08001c;
+        public static final int txt_row_liste_matiere=0x7f08001a;
+        public static final int txt_row_liste_note=0x7f08001b;
         public static final int typeExamInput=0x7f08000a;
         public static final int typeExamLabel=0x7f080009;
         public static final int valeurCoeffLabel=0x7f080010;

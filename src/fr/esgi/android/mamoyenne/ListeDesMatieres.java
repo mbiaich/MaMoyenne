@@ -6,12 +6,14 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
 import fr.esgi.android.mamoyenne.adapters.MatiereListAdapter;
 import fr.esgi.android.mamoyenne.tables.Matiere;
@@ -60,6 +62,19 @@ public class ListeDesMatieres extends ListActivity {
 			setListAdapter(adapter);
 		}
 		
+	}
+	
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		Intent i = new Intent(this, NotesPourUneMatiere.class);
+		i.putExtra("idMatiere", id);
+		startActivity(i);
+	}
+	
+	@Override
+	public void onDestroy(){
+		matiereDao.close();
+		super.onDestroy();
 	}
 
 }

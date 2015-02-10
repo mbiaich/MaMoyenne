@@ -15,13 +15,15 @@ import android.widget.EditText;
 public class AjoutNote extends Activity {
 
 	private NoteDAO noteDao;
+	private int idMatiere;
 	
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.activity_ajout_matiere);
+	        setContentView(R.layout.activity_ajout_note);
 	        noteDao = new NoteDAO(this);
 	        noteDao.open();
+	        idMatiere = getIntent().getExtras().getInt("idMatiere");
 	    }
 
 
@@ -47,9 +49,8 @@ public class AjoutNote extends Activity {
 	    public void createNote(View v) {
 	    	EditText noteValue = (EditText) findViewById(R.id.noteInput);
 	    	EditText txtCoefficient = (EditText) findViewById(R.id.coefInput);
-	    	EditText txtTypeExamInput = (EditText) findViewById(R.id.typeExamInput);
-//TODO CHANGER Note et gérer l'ID
-	    	Note n=new Note();
+	    	EditText txtTypeExamInput = (EditText) findViewById(R.id.typeExamInput);	    	
+	    	Note n = new Note(Float.parseFloat(noteValue.getText().toString()),Float.parseFloat(txtCoefficient.getText().toString()),txtTypeExamInput.getText().toString(),idMatiere);
 	    	noteDao.createNote(n);
 	    	this.startActivity(new Intent(this, ListeDesMatieres.class));
 	    }

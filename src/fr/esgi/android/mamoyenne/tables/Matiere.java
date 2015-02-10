@@ -3,7 +3,7 @@ package fr.esgi.android.mamoyenne.tables;
 
 public class Matiere {
 
-	private int idMatiere;
+	private long idMatiere;
 	private String nom;
 	private float coefficient;
 	
@@ -12,7 +12,7 @@ public class Matiere {
 	 * @param nom
 	 * @param coefficient
 	 */
-	public Matiere(int idMatiere, String nom, float coefficient) {
+	public Matiere(long idMatiere, String nom, float coefficient) {
 		this.idMatiere = idMatiere;
 		this.nom = nom;
 		this.coefficient = coefficient;
@@ -38,14 +38,14 @@ public class Matiere {
 	/**
 	 * @return the idMatiere
 	 */
-	public int getIdMatiere() {
+	public long getIdMatiere() {
 		return idMatiere;
 	}
 
 	/**
 	 * @param idMatiere the idMatiere to set
 	 */
-	public void setIdMatiere(int idMatiere) {
+	public void setIdMatiere(long idMatiere) {
 		this.idMatiere = idMatiere;
 	}
 

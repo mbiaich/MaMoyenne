@@ -81,9 +81,9 @@ public class NoteDAO extends DAOBase {
 		return notes;
 	}
 	
-	public List<Note> getNotes(int idMatiere) {
+	public List<Note> getNotes(long idMatiere) {
 		List<Note> notes = new ArrayList<Note>();
-		Cursor cursor = mDb.rawQuery("SELECT idNote, note, coefficient, typeExamen, idMatiere FROM " + TABLE_NAME + " WHERE idMatiere = ?", new String[]{Integer.toString(idMatiere)});
+		Cursor cursor = mDb.rawQuery("SELECT idNote, note, coefficient, typeExamen, idMatiere FROM " + TABLE_NAME + " WHERE idMatiere = ?", new String[]{Long.toString(idMatiere)});
 		if(cursor.moveToFirst()) {
 			Note n = cursorToNote(cursor);
 			notes.add(n);

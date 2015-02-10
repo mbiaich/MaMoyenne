@@ -37,7 +37,7 @@ public class NoteListAdapter extends BaseAdapter {
 
 	@Override
 	public long getItemId(int position) {
-		return 0;
+		return notes.get(position).getIdNote();
 	}
 
 	@Override
@@ -45,7 +45,7 @@ public class NoteListAdapter extends BaseAdapter {
 		Note note = (Note) getItem(position);
 		convertView = inflater.inflate(R.layout.list_view_note, null);
 		TextView txtRowListNote = (TextView) convertView.findViewById(R.id.txt_row_liste_note);
-		txtRowListNote.setText((int)note.getNote());
+		txtRowListNote.setText(note.getNote().toString());
 		return convertView;
 	}
 }

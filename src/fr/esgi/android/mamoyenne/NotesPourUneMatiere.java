@@ -17,6 +17,7 @@ import android.widget.ListView;
 public class NotesPourUneMatiere extends ListActivity {
 
 	private NoteDAO NoteDAO;
+	private long idMatiere;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class NotesPourUneMatiere extends ListActivity {
 		NoteDAO.open();
 		refresh();
 		setContentView(R.layout.activity_notes_pour_matiere);
+		idMatiere = getIntent().getExtras().getLong("idMatiere");
 	}
 
 	@Override
@@ -52,11 +54,17 @@ public class NotesPourUneMatiere extends ListActivity {
 
 	public void refresh() {
 		ListView listView = (ListView) findViewById(android.R.id.list);
-		List<Note> Notes = NoteDAO.getNotes();
+		List<Note> Notes = NoteDAO.getNotes(idMatiere);
 		if (!Notes.isEmpty()) {
 			NoteListAdapter adapter = new NoteListAdapter(this, Notes);
 			setListAdapter(adapter);
 		}
 		
+	}
+	
+	@Override
+	public void onDestroy(){
+		NoteDAO.close();
+		super.onDestroy();
 	}
 }

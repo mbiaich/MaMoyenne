@@ -23,7 +23,7 @@
         android:text="Notes pour : " />
 
     <ListView
-        android:id="@+id/noteListView"
+        android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="180dp" >
     </ListView>

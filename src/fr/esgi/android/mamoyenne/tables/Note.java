@@ -4,11 +4,11 @@ import fr.esgi.android.mamoyenne.R;
 
 public class Note {
 
-	private int idNote;
-	private float note;
+	private long idNote;
+	private Float note;
 	private float coefficient;
 	private String typeExamen;
-	private int idMatiere;
+	private long idMatiere;
 	
 	/**
 	 * @param idNote
@@ -16,7 +16,7 @@ public class Note {
 	 * @param coefficient
 	 * @param idMatiere
 	 */
-	public Note(int idNote, float note, float coefficient, String typeExamen, int idMatiere) {
+	public Note(long idNote, Float note, float coefficient, String typeExamen, long idMatiere) {
 		this.idNote = idNote;
 		this.note = note;
 		this.coefficient = coefficient;
@@ -24,35 +24,48 @@ public class Note {
 		this.idMatiere = idMatiere;
 	}
 	
-	public Note() {
+	/**
+	 * @param note
+	 * @param coefficient
+	 * @param typeExamen
+	 * @param idMatière
+	 */
+	public Note(Float note, float coefficient, String typeExamen, long idMatiere) {
+		this.note = note;
+		this.coefficient = coefficient;
+		this.typeExamen = typeExamen;
+		this.idMatiere = idMatiere;
+	}
+	
+	public Note(){
 		
 	}
 
 	/**
 	 * @return the idNote
 	 */
-	public int getIdNote() {
+	public long getIdNote() {
 		return idNote;
 	}
 
 	/**
 	 * @param idNote the idNote to set
 	 */
-	public void setIdNote(int idNote) {
+	public void setIdNote(long idNote) {
 		this.idNote = idNote;
 	}
 
 	/**
 	 * @return the note
 	 */
-	public float getNote() {
+	public Float getNote() {
 		return note;
 	}
 
 	/**
 	 * @param note the note to set
 	 */
-	public void setNote(float note) {
+	public void setNote(Float note) {
 		this.note = note;
 	}
 
@@ -87,14 +100,14 @@ public class Note {
 	/**
 	 * @return the idMatiere
 	 */
-	public int getIdMatiere() {
+	public long getIdMatiere() {
 		return idMatiere;
 	}
 
 	/**
 	 * @param idMatiere the idMatiere to set
 	 */
-	public void setIdMatiere(int idMatiere) {
+	public void setIdMatiere(long idMatiere) {
 		this.idMatiere = idMatiere;
 	}
 }
