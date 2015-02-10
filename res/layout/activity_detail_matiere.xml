@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number" />
-
+ <LinearLayout >
     <Button
         android:id="@+id/modify"
         android:layout_width="wrap_content"
@@ -53,5 +53,5 @@
         android:layout_height="wrap_content"
         android:onClick="deleteMatiere"
         android:text="@string/delete" />
-
+        </LinearLayout>
 </LinearLayout>

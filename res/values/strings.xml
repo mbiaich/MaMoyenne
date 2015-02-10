@@ -23,6 +23,7 @@
  	<string name="markManage">Gérer Mes Notes</string>
  	<string name="markFor">Notes pour : </string>
  	<string name="average">Moyenne :</string>
+ 	<string name="mainGeneralMark">%d / 20</string>
  	
 
 </resources>
