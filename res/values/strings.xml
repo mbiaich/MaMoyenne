@@ -9,6 +9,20 @@
  	<string name="subjectNameLabel">Nom de la matière</string>
  	<string name="coefLabel">Coefficient de la matière</string>
  	<string name="register">Enregistrer</string>
+ 	<string name="addMark">AJOUT D\'UNE NOTE</string>
+ 	<string name="mark">Note</string>
+ 	<string name="coefNote">Coefficient de la note</string>
+ 	<string name="typeExa">Type d\'examen</string>
+ 	<string name="subjectDetails">Detail Matiere</string>
+ 	<string name="modify">Modifier</string>
+ 	<string name="delete">Supprimer</string>
+ 	<string name="markDetails">Details notes</string>
+ 	<string name="subjectList">Liste Matiere</string>
+ 	<string name="add">Ajouter</string>
+ 	<string name="generalMark">Votre Moyenne Generale est de :</string>
+ 	<string name="markManage">Gérer Mes Notes</string>
+ 	<string name="markFor">Notes pour : </string>
+ 	<string name="average">Moyenne :</string>
  	
 
 </resources>

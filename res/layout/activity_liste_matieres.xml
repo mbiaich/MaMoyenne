@@ -7,14 +7,14 @@
         android:id="@+id/listeMatieresLabel"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:text="Liste Matiere" />
+        android:text="@string/subjectList" />
 
     <Button
         android:id="@+id/btnFrmCreateMatiere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="frmAjoutMatiere"
-        android:text="Ajouter" />
+        android:text="@string/add" />
 
 <ListView
         android:id="@android:id/list"

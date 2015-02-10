@@ -8,13 +8,13 @@
         android:id="@+id/detailMatiereLabel"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:text="Detail Matiere" />
+        android:text="@string/subjectDetails" />
 
     <TextView
         android:id="@+id/nomMatiereLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nom de la matiere" />
+        android:text="@string/subjectNameLabel" />
 
     <EditText
         android:id="@+id/nomMatiereInput"
@@ -31,7 +31,7 @@
         android:id="@+id/coeffLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Coefficient de la matiere" />
+        android:text="@string/coefLabel" />
 
     <EditText
         android:id="@+id/coefficietMatiereInput"
@@ -44,12 +44,12 @@
         android:id="@+id/modify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Modifier" />
+        android:text="@string/modify" />
 
     <Button
         android:id="@+id/btnFrmCreateMatiere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Supprimer" />
+        android:text="@string/delete" />
 
 </LinearLayout>

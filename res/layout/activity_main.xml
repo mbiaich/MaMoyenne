@@ -17,7 +17,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="94dp"
         android:singleLine="false"
-        android:text="Votre Moyenne Generale est de :"
+        android:text="@string/generalMark"
         android:textAlignment="center"
         android:textColor="@android:color/white" 
         android:gravity="center"
@@ -44,7 +44,7 @@
         android:backgroundTint="@android:color/black"
         android:gravity="center"
         android:onClick="onClick"
-        android:text="Gérer Mes Notes"
+        android:text="@string/markManage"
         android:textColor="@android:color/white" />
   
 </RelativeLayout>

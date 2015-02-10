@@ -9,13 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Details notes" />
+        android:text="@string/markDetails" />
 
     <TextView
         android:id="@+id/noteLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Note" />
+        android:text="@string/mark" />
 
     <TextView
         android:id="@+id/valeurNoteLabel"
@@ -28,7 +28,7 @@
         android:id="@+id/coefficientMatiereLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Coefficient de la note" />
+        android:text="@string/coefNote" />
 
     <TextView
         android:id="@+id/valeurCoeffLabel"
@@ -41,7 +41,7 @@
         android:id="@+id/typeExamLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Type d'Examen" />
+        android:text="@string/typeExa" />
 
     <TextView
         android:id="@+id/valeurTypeExam"
@@ -54,12 +54,12 @@
         android:id="@+id/modify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Modifier" />
+        android:text="@string/modify" />
 
     <Button
         android:id="@+id/btnFrmCreateMatiere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Supprimer" />
+        android:text="@string/delete" />
 
 </LinearLayout>

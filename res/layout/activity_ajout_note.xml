@@ -10,13 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="AJOUT D&apos;UNE NOTE" />
+        android:text="@string/addMark" />
 
     <TextView
         android:id="@+id/noteLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Note" />
+        android:text="@string/mark" />
 
     <EditText
         android:id="@+id/noteInput"
@@ -32,7 +32,7 @@
         android:id="@+id/coefficientMatiereLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Coefficient de la note" />
+        android:text="@string/coefNote" />
 
     <EditText
         android:id="@+id/coefInput"
@@ -46,7 +46,7 @@
         android:id="@+id/typeExamLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Type d'examen" />
+        android:text="@string/typeExa" />
 
     <EditText
         android:id="@+id/typeExamInput"
@@ -58,9 +58,9 @@
 
     <Button
         android:id="@+id/register"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="createNote"
-        android:text="Enregistrer" />
+        android:text="@string/register" />
 
 </LinearLayout>

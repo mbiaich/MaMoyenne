@@ -17,7 +17,9 @@
         android:id="@+id/nomMatiereLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nom de la matière" />
+        android:text="@string/subjectNameLabel">
+        
+    </TextView>
 
     <EditText
         android:id="@+id/nomMatiereInput"
@@ -32,7 +34,9 @@
         android:id="@+id/coefficientMatiereLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Coefficient de la matière" />
+        android:text="@string/coefLabel">
+        
+    </TextView>
 
     <EditText
         android:id="@+id/coefficietMatiereInput"
@@ -46,6 +50,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="createMatiere"
-        android:text="Enregistrer" />
+        android:text="@string/register" />
 
 </LinearLayout>

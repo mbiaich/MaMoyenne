@@ -8,20 +8,20 @@
         android:id="@+id/detailMatiereButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Details Matiere" />
+        android:text="@string/subjectDetails" />
 
     <Button
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="frmAjoutNote"
-        android:text="Ajouter" />
+        android:text="@string/add" />
 
     <TextView
         android:id="@+id/ajoutMatiereLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Notes pour : " />
+        android:text="@string/markFor" />
 
     <ListView
         android:id="@android:id/list"
@@ -33,7 +33,7 @@
         android:id="@+id/idnoteLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Moyenne :" />
+        android:text="@string/average" />
 
     <TextView
         android:id="@+id/averageValue"
