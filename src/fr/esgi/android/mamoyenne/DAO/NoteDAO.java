@@ -2,11 +2,11 @@ package fr.esgi.android.mamoyenne.DAO;
 
 import java.util.ArrayList;
 import java.util.List;
-import fr.esgi.android.mamoyenne.R;
-import fr.esgi.android.mamoyenne.tables.Note;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import fr.esgi.android.mamoyenne.tables.Note;
 
 public class NoteDAO extends DAOBase {
 
@@ -78,6 +78,17 @@ public class NoteDAO extends DAOBase {
 			}
 		}
 		cursor.close();
+		return notes;
+	}
+	
+	public List<Note> getNotes(int idMatiere) {
+		List<Note> notes = new ArrayList<Note>();
+		Cursor cursor = mDb.rawQuery("SELECT idNote, note, coefficient, typeExamen, idMatiere FROM " + TABLE_NAME + " WHERE idMatiere = ?", new String[]{Integer.toString(idMatiere)});
+		if(cursor.moveToFirst()) {
+			Note n = cursorToNote(cursor);
+			notes.add(n);
+			cursor.moveToNext();
+		}
 		return notes;
 	}
 
