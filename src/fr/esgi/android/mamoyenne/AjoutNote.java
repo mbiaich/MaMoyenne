@@ -52,7 +52,15 @@ public class AjoutNote extends Activity {
 	    	EditText txtTypeExamInput = (EditText) findViewById(R.id.typeExamInput);	    	
 	    	Note n = new Note(Float.parseFloat(noteValue.getText().toString()),Float.parseFloat(txtCoefficient.getText().toString()),txtTypeExamInput.getText().toString(),idMatiere);
 	    	noteDao.createNote(n);
-	    	this.startActivity(new Intent(this, ListeDesMatieres.class));
+	    	Intent i = new Intent(this, NotesPourUneMatiere.class);
+			i.putExtra("idMatiere", idMatiere);
+			startActivity(i);
 	    }
+	    
+	    @Override
+		public void onDestroy(){
+	    	noteDao.close();
+			super.onDestroy();
+		}
 
 }

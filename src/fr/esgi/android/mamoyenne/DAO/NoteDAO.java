@@ -89,7 +89,8 @@ public class NoteDAO extends DAOBase {
 			notes.add(n);
 			cursor.moveToNext();
 		}
-		return notes;
+		System.out.println(notes.size());
+		return notes;		
 	}
 
 	private Note cursorToNote(Cursor cursor) {
