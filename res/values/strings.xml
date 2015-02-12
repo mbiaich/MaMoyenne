@@ -24,6 +24,10 @@
  	<string name="markFor">Notes pour : </string>
  	<string name="average">Moyenne :</string>
  	<string name="mainGeneralMark">%d / 20</string>
+ 	<string name="deletedMark">Note supprimée !</string>
+ 	<string name="typeExaVal">Valeur type d\'examen</string>
+ 	<string name="markValCoef">Valeur du coefficient de la note</string>
+ 	<string name="noteInputLabel">Saisie de note</string>
  	
 
 </resources>

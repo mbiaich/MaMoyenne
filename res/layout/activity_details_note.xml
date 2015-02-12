@@ -17,11 +17,11 @@
         android:layout_height="wrap_content"
         android:text="@string/mark" />
 
-    <TextView
+    <EditText
         android:id="@+id/valeurNoteLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="note ici"
+        android:text="@string/noteInputLabel"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -30,11 +30,11 @@
         android:layout_height="wrap_content"
         android:text="@string/coefNote" />
 
-    <TextView
+    <EditText
         android:id="@+id/valeurCoeffLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Valeur coef de la note"
+        android:text="@string/markValCoef"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -43,23 +43,31 @@
         android:layout_height="wrap_content"
         android:text="@string/typeExa" />
 
-    <TextView
+    <EditText
         android:id="@+id/valeurTypeExam"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Valeur type d'examen"
+        android:text="@string/typeExaVal"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <Button
-        android:id="@+id/modify"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/modify" />
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp" >
 
-    <Button
-        android:id="@+id/btnFrmCreateMatiere"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/delete" />
+        <Button
+            android:id="@+id/modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/modify" />
+
+        <Button
+            android:id="@+id/btnFrmCreateMatiere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete" />
+    </LinearLayout>
 
 </LinearLayout>

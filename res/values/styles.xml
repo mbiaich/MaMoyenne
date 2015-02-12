@@ -17,4 +17,19 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <style name="ButtnTxt">
+        <item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/textColor</item>
+		<item name="android:textSize">@dimens/textSize</item>
+		<item name="android:background">@color/btnBackground</item>
+		<item name="android:layout_marginTop">@dimen/layoutMarginTop</item>
+		<item name="android:layout_gravity">center</item>
+    </style>
+    
+    
+    <style name="LabelTitles">
+        
+    </style>
+    
 </resources>

@@ -95,6 +95,7 @@ public final class R {
         public static final int coefLabel=0x7f060006;
         public static final int coefNote=0x7f06000a;
         public static final int delete=0x7f06000e;
+        public static final int deletedMark=0x7f060017;
         public static final int generalMark=0x7f060012;
         public static final int hello_world=0x7f060001;
         public static final int labelGererNotes=0x7f060003;
@@ -103,12 +104,15 @@ public final class R {
         public static final int markDetails=0x7f06000f;
         public static final int markFor=0x7f060014;
         public static final int markManage=0x7f060013;
+        public static final int markValCoef=0x7f060019;
         public static final int modify=0x7f06000d;
+        public static final int noteInputLabel=0x7f06001a;
         public static final int register=0x7f060007;
         public static final int subjectDetails=0x7f06000c;
         public static final int subjectList=0x7f060010;
         public static final int subjectNameLabel=0x7f060005;
         public static final int typeExa=0x7f06000b;
+        public static final int typeExaVal=0x7f060018;
     }
     public static final class style {
         /** 

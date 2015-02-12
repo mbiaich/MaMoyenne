@@ -1,57 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/detailMatiereLabel"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:text="@string/subjectDetails" />
-
-    <TextView
-        android:id="@+id/nomMatiereLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/subjectNameLabel" />
-
-    <EditText
-        android:id="@+id/nomMatiereInput"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10" 
-        android:inputType="text"
-        >
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-        <requestFocus />
-    </EditText>
+        <TextView
+            android:id="@+id/detailMatiereLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subjectDetails"
+            style="?android:attr/listSeparatorTextViewStyle" />
 
-    <TextView
-        android:id="@+id/coeffLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/coefLabel" />
+        <TextView
+            android:id="@+id/nomMatiereLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subjectNameLabel" 
+             />
 
-    <EditText
-        android:id="@+id/coefficietMatiereInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
- <LinearLayout >
-    <Button
-        android:id="@+id/modify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="updateMatiere"        
-        android:text="@string/modify" />
+        <EditText
+            android:id="@+id/nomMatiereInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text" >
 
-    <Button
-        android:id="@+id/btnFrmCreateMatiere"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="deleteMatiere"
-        android:text="@string/delete" />
+            <requestFocus
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/coeffLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/coefLabel" />
+
+        <EditText
+            android:id="@+id/coefficietMatiereInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" 
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            >
+
+            <Button
+                android:id="@+id/modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="updateMatiere"
+                android:text="@string/modify" />
+
+            <Button
+                android:id="@+id/btnFrmCreateMatiere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="deleteMatiere"
+                android:text="@string/delete" />
         </LinearLayout>
-</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
