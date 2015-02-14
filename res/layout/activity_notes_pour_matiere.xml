@@ -1,46 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:background="@color/_background" >
 
-    <Button
-        android:id="@+id/detailMatiereButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="viewDetailsMatiere"
-        android:text="@string/subjectDetails" />
-
-    <Button
-        android:id="@+id/addButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="frmAjoutNote"
-        android:text="@string/add" />
-
-    <TextView
-        android:id="@+id/ajoutMatiereLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/markFor" />
-
-    <ListView
-        android:id="@android:id/list"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="180dp" >
-    </ListView>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+         >
 
-    <TextView
-        android:id="@+id/idnoteLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/average" />
+        <Button
+            android:id="@+id/detailMatiereButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="viewDetailsMatiere"
+            android:text="@string/subjectDetails" />
 
-    <TextView
-        android:id="@+id/averageValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Average Value/20"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_button"
+            android:onClick="frmAjoutNote"
+            android:text="@string/add" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/ajoutMatiereLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/markFor" />
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="180dp" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/idnoteLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/average" />
+
+        <TextView
+            android:id="@+id/averageValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average Value/20"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+</ScrollView>

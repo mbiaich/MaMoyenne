@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:layout_weight="6"
+    android:background="@color/_background" >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
         android:orientation="vertical" >
 
         <TextView
             android:id="@+id/ajoutMatiereLabel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_gravity="center_vertical"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/addSubject" />
+            android:text="@string/addSubject"
+            android:textAppearance="@style/LabelTitles" />
 
         <TextView
             android:id="@+id/nomMatiereLabel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/subjectNameLabel" >
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/subjectNameLabel"
+            android:textAppearance="@style/subLabelTitles" >
         </TextView>
 
         <EditText
             android:id="@+id/nomMatiereInput"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
             android:ems="10"
             android:inputType="text" >
 
@@ -36,28 +47,35 @@
         <TextView
             android:id="@+id/coefficientMatiereLabel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/coefLabel" >
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/coefLabel"
+            android:textAppearance="@style/subLabelTitles" >
         </TextView>
-          <EditText
-                android:id="@+id/coefficietMatiereInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
+
+        <EditText
+            android:id="@+id/coefficietMatiereInput"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="288dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
             android:orientation="vertical" >
 
             <Button
                 android:id="@+id/register"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/green_button"
                 android:onClick="createMatiere"
                 android:text="@string/register" />
-
         </LinearLayout>
     </LinearLayout>
 

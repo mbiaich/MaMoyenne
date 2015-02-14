@@ -1,73 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-    <TextView
-        android:id="@+id/detailMatiereLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/markDetails" />
-
-    <TextView
-        android:id="@+id/noteLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mark" />
-
-    <EditText
-        android:id="@+id/valeurNoteLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/noteInputLabel"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/coefficientMatiereLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/coefNote" />
-
-    <EditText
-        android:id="@+id/valeurCoeffLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/markValCoef"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/typeExamLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/typeExa" />
-
-    <EditText
-        android:id="@+id/valeurTypeExam"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/typeExaVal"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+    android:layout_height="match_parent" 
+    android:background="@color/_background">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="50dp" >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/modify"
+        <TextView
+            android:id="@+id/detailMatiereLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/markDetails" />
+
+        <TextView
+            android:id="@+id/noteLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/modify" />
+            android:text="@string/mark" />
 
-        <Button
-            android:id="@+id/btnFrmCreateMatiere"
+        <EditText
+            android:id="@+id/valeurNoteLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/noteInputLabel"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/coefficientMatiereLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/delete" />
+            android:text="@string/coefNote" />
+
+        <EditText
+            android:id="@+id/valeurCoeffLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/markValCoef"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/typeExamLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/typeExa" />
+
+        <EditText
+            android:id="@+id/valeurTypeExam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/typeExaVal"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/green_button"
+                android:text="@string/modify" />
+
+            <Button
+                android:id="@+id/btnFrmCreateMatiere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/red_button"
+                android:text="@string/delete" />
+        </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

@@ -6,26 +6,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#3f374f"
+    android:background="@color/_background"
     tools:context="fr.esgi.android.mamoyenne.MainActivity" >
 
     <TextView
         android:id="@+id/messageAccueil"
+        style="@style/CustomFontStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="94dp"
+        android:layout_marginTop="55dp"
+        android:gravity="center"
         android:singleLine="false"
         android:text="@string/generalMark"
-        android:textColor="@android:color/white" 
-        android:gravity="center"
-        />
+        android:textAppearance="@style/subLabelTitles" />
 
     <TextView
         android:id="@+id/myenneLabel"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textColor="@android:color/white"
+        android:textSize="12pt"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:background="@drawable/textview_round"
@@ -38,8 +40,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="82dp"
-        android:background="@drawable/bouton_arrondi"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/green_button"
         android:gravity="center"
         android:onClick="onClick"
         android:text="@string/markManage"
