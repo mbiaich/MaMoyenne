@@ -11,23 +11,31 @@
 
         <TextView
             android:id="@+id/listeMatieresLabel"
-            android:layout_width="175dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/subjectList" />
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/subjectList"
+            android:textAppearance="@style/LabelTitles" />
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="222dp" 
+            >
+        </ListView>
 
         <Button
             android:id="@+id/btnFrmCreateMatiere"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
             android:background="@drawable/green_button"
             android:onClick="frmAjoutMatiere"
             android:text="@string/add" />
-
-        <ListView
-            android:id="@android:id/list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-        </ListView>
     </LinearLayout>
 
 </ScrollView>

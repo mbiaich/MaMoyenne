@@ -14,14 +14,19 @@
             android:id="@+id/ajoutMatiereLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="@string/addMark" />
+            android:text="@string/addMark"
+            android:textAppearance="@style/LabelTitles" />
 
         <TextView
             android:id="@+id/noteLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mark" />
+            android:text="@string/mark"
+            android:textAppearance="@style/subLabelTitles" />
 
         <EditText
             android:id="@+id/noteInput"
@@ -37,7 +42,8 @@
             android:id="@+id/coefficientMatiereLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/coefNote" />
+            android:text="@string/coefNote"
+            android:textAppearance="@style/subLabelTitles" />
 
         <EditText
             android:id="@+id/coefInput"
@@ -50,7 +56,8 @@
             android:id="@+id/typeExamLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/typeExa" />
+            android:text="@string/typeExa"
+            android:textAppearance="@style/subLabelTitles" />
 
         <EditText
             android:id="@+id/typeExamInput"
@@ -61,9 +68,10 @@
 
         <Button
             android:id="@+id/register"
-            android:background="@drawable/green_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/green_button"
             android:onClick="createNote"
             android:text="@string/register" />
     </LinearLayout>

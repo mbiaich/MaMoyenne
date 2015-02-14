@@ -18,11 +18,7 @@
     </style>
 
     <style name="ButtnTxt">
-        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/textColor</item>
-        <item name="android:textSize">@dimens/textSize</item>
-        <item name="android:background">@color/btnBackground</item>
         <item name="android:layout_marginTop">@dimen/layoutMarginTop</item>
         <item name="android:layout_gravity">center</item>
     </style>
@@ -35,7 +31,7 @@
         <item name="android:layout_margin">3dp</item>
         <item name="android:textSize">30pt</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowColor">#FFF</item>
         <item name="android:shadowDx">1</item>
         <item name="android:shadowDy">1</item>
         <item name="android:shadowRadius">2</item>
@@ -62,6 +58,7 @@
         <item name="android:textSize">8pt</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/couleurTexte</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <style name="subLabelTitles">
@@ -69,5 +66,6 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/couleurTexte</item>
     </style>
-
+    
+    
 </resources>

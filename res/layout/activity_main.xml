@@ -10,19 +10,6 @@
     tools:context="fr.esgi.android.mamoyenne.MainActivity" >
 
     <TextView
-        android:id="@+id/messageAccueil"
-        style="@style/CustomFontStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
-        android:gravity="center"
-        android:singleLine="false"
-        android:text="@string/generalMark"
-        android:textAppearance="@style/subLabelTitles" />
-
-    <TextView
         android:id="@+id/myenneLabel"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -34,13 +21,25 @@
         android:gravity="center"
         android:text="@string/mainGeneralMark" />
 
+    <TextView
+        android:id="@+id/messageAccueil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/myenneLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:singleLine="false"
+        android:text="@string/generalMark"
+        android:textAppearance="@style/LabelTitles" />
+
     <Button
         android:id="@+id/gestionNotes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/myenneLabel"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/green_button"
         android:gravity="center"
         android:onClick="onClick"

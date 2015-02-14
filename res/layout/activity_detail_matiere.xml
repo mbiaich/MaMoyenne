@@ -5,6 +5,7 @@
     android:background="@color/_background" >
 
     <LinearLayout
+        style="@dimen/activity_vertical_margin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
@@ -13,39 +14,45 @@
             android:id="@+id/detailMatiereLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
             android:text="@string/subjectDetails"
-            style="?android:attr/listSeparatorTextViewStyle" />
+            android:textAppearance="@style/LabelTitles" />
 
         <TextView
             android:id="@+id/nomMatiereLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/subjectNameLabel" 
-             />
+            android:text="@string/subjectNameLabel"
+            android:textAppearance="@style/subLabelTitles" />
 
         <EditText
             android:id="@+id/nomMatiereInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
             android:ems="10"
             android:inputType="text" >
 
             <requestFocus
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-
         </EditText>
 
         <TextView
             android:id="@+id/coeffLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/coefLabel" />
+            android:text="@string/coefLabel"
+            android:textAppearance="@style/subLabelTitles" />
 
         <EditText
             android:id="@+id/coefficietMatiereInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
             android:ems="10"
             android:inputType="number" />
 
@@ -53,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="100dp"
             android:orientation="horizontal" >
 
             <Button
@@ -74,7 +81,6 @@
                 android:onClick="deleteMatiere"
                 android:text="@string/delete" />
         </LinearLayout>
-
     </LinearLayout>
 
 </ScrollView>

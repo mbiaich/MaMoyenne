@@ -11,12 +11,16 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
+        public static final int _background=0x7f04000c;
+        public static final int bg_gray=0x7f04000b;
         public static final int blue=0x7f040000;
+        public static final int couleurTexte=0x7f04000d;
         public static final int darkblue=0x7f040005;
         public static final int darkgreen=0x7f040007;
         public static final int darkorange=0x7f040008;
         public static final int darkpurple=0x7f040006;
         public static final int darkred=0x7f040009;
+        public static final int emphasis=0x7f04000a;
         public static final int green=0x7f040002;
         public static final int orange=0x7f040003;
         public static final int purple=0x7f040001;
@@ -32,18 +36,22 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
+        public static final int layoutMarginTop=0x7f050002;
     }
     public static final class drawable {
-        public static final int bouton_arrondi=0x7f020000;
-        public static final int button_oval=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int textview_round=0x7f020003;
+        public static final int blue_button=0x7f020000;
+        public static final int bouton_arrondi=0x7f020001;
+        public static final int button_oval=0x7f020002;
+        public static final int green_button=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int red_button=0x7f020005;
+        public static final int section_header=0x7f020006;
+        public static final int textview_round=0x7f020007;
     }
     public static final class id {
         public static final int action_settings=0x7f09001c;
-        public static final int addButton=0x7f090017;
+        public static final int addButton=0x7f090019;
         public static final int ajoutMatiereLabel=0x7f090000;
-        public static final int averageValue=0x7f090019;
         public static final int btnFrmCreateMatiere=0x7f09000e;
         public static final int coefInput=0x7f090008;
         public static final int coeffLabel=0x7f09000c;
@@ -52,11 +60,12 @@ public final class R {
         public static final int detailMatiereButton=0x7f090016;
         public static final int detailMatiereLabel=0x7f09000b;
         public static final int gestionNotes=0x7f090015;
-        public static final int idnoteLabel=0x7f090018;
+        public static final int idnoteLabel=0x7f090017;
         public static final int listeMatieresLabel=0x7f090012;
-        public static final int messageAccueil=0x7f090013;
+        public static final int messageAccueil=0x7f090014;
         public static final int modify=0x7f09000d;
-        public static final int myenneLabel=0x7f090014;
+        public static final int moyenneMatiereLabel=0x7f090018;
+        public static final int myenneLabel=0x7f090013;
         public static final int nomMatiereInput=0x7f090002;
         public static final int nomMatiereLabel=0x7f090001;
         public static final int noteInput=0x7f090007;
@@ -141,5 +150,12 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        public static final int ButtnTxt=0x7f070002;
+        public static final int ButtonText=0x7f070003;
+        public static final int CustomFontStyle=0x7f070004;
+        public static final int LabelTitles=0x7f070007;
+        public static final int MyTheme=0x7f070006;
+        public static final int sectionHeader=0x7f070005;
+        public static final int subLabelTitles=0x7f070008;
     }
 }
