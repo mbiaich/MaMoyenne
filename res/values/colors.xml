@@ -12,6 +12,6 @@
     <item name="darkred" type="color">#FFCC0000</item>
     <item name="emphasis" type="color">#31b6e7</item>
     <item name="bg_gray" type="color">#cecbce</item>
-    <item name="_background" type="color">"#3f374f"</item>
+    <item name="_background" type="color">#3f374f</item>
     <item name="couleurTexte" type="color">#FFF</item>
 </resources>

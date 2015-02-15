@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AjoutNote extends Activity {
 
@@ -55,6 +56,8 @@ public class AjoutNote extends Activity {
 	    	Intent i = new Intent(this, NotesPourUneMatiere.class);
 			i.putExtra("idMatiere", idMatiere);
 			startActivity(i);
+			
+			Toast.makeText(getApplicationContext(), "Note ajoutée !", Toast.LENGTH_LONG).show();
 	    }
 	    
 	    @Override

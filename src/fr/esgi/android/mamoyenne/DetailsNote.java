@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class DetailsNote extends Activity {
 	
 	private NoteDAO noteDao;
-	private Note m;
+	private Note n;
 	
 	
 	@Override
@@ -21,54 +21,49 @@ public class DetailsNote extends Activity {
         setContentView(R.layout.activity_details_note);
         noteDao = new NoteDAO(this);
         noteDao.open();
-        m = (Note) getIntent().getExtras().get("note");
+        n = (Note) getIntent().getExtras().get("note");
         
         EditText editTextNom = (EditText)findViewById(R.id.valeurNoteLabel);
-        editTextNom.setText(m.getNote().toString());
+        editTextNom.setText(n.getNote().toString());
         
         EditText editTextCoeff = (EditText)findViewById(R.id.valeurCoeffLabel);
-        editTextCoeff.setText(String.valueOf(m.getCoefficient()));
+        editTextCoeff.setText(String.valueOf(n.getCoefficient()));
         
         EditText editTextTypeExa = (EditText)findViewById(R.id.valeurTypeExam);
-        editTextTypeExa.setText(String.valueOf(m.getCoefficient()));
+        editTextTypeExa.setText(n.getTypeExamen());
                
     }	
 	
-	public void deletenote(View v) {
-		Intent i = new Intent(this, ListeDesNotes.class);
-    	noteDao.deleteNote(m.getIdNote());
+	public void deleteNote(View v) {
+    	noteDao.deleteNote(n.getIdNote());
+		Intent i = new Intent(this, NotesPourUneMatiere.class);
+		i.putExtra("idMatiere", n.getIdMatiere());
 		startActivity(i);
 		
 		Toast.makeText(getApplicationContext(), "Note supprimée", Toast.LENGTH_LONG).show();
     }
 	
-	public void updatenote(View v) {
+	public void updateNote(View v) {
 		EditText editTextNom = (EditText)findViewById(R.id.valeurNoteLabel);    
         EditText editTextCoeff = (EditText)findViewById(R.id.valeurCoeffLabel);
 		EditText editValeurTypeExa = (EditText)findViewById(R.id.valeurTypeExam);    
 
         
-        m.setNote(Float.parseFloat(editTextNom.getText().toString()));
-        m.setCoefficient(Float.parseFloat(editTextCoeff.getText().toString()));
-        m.setTypeExamen(editValeurTypeExa.getText().toString());
+        n.setNote(Float.parseFloat(editTextNom.getText().toString()));
+        n.setCoefficient(Float.parseFloat(editTextCoeff.getText().toString()));
+        n.setTypeExamen(editValeurTypeExa.getText().toString());
 		
-        noteDao.updateNote(m);
+        noteDao.updateNote(n);
 		Intent i = new Intent(this, DetailsNote.class);
-		i.putExtra("note", m);
+		i.putExtra("note", n);
 		startActivity(i);
 		
 		Toast.makeText(getApplicationContext(), "Note modifiée !", Toast.LENGTH_LONG).show();
     }
-	
-	
-	
+		
 	@Override
 	public void onDestroy(){
 		noteDao.close();
 		super.onDestroy();
 	}
-	
-	
-	
-
 }

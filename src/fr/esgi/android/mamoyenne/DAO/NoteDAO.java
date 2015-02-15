@@ -50,7 +50,7 @@ public class NoteDAO extends DAOBase {
 		value.put(COEFFICIENT, n.getCoefficient());
 		value.put(TYPEEXAMEN, n.getTypeExamen());
 		value.put(IDMATIERE, n.getIdMatiere());
-		mDb.update(TABLE_NAME, value, IDNOTE + " + ?",
+		mDb.update(TABLE_NAME, value, IDNOTE + " = ?",
 				new String[] { String.valueOf(n.getIdNote()) });
 	}
 

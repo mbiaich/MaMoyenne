@@ -57,16 +57,10 @@ public class DetailsMatiere extends Activity {
 		
 		Toast.makeText(getApplicationContext(), "Matière modifiée !", Toast.LENGTH_LONG).show();
     }
-	
-	
-	
+		
 	@Override
 	public void onDestroy(){
 		matiereDao.close();
 		super.onDestroy();
 	}
-	
-	
-	
-
 }

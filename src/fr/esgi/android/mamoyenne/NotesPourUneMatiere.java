@@ -63,6 +63,7 @@ public class NotesPourUneMatiere extends ListActivity {
 		i.putExtra("matiere", matiereDao.getMatiere(idMatiere));
 		this.startActivity(i);
 	}
+	
 
 	public void refresh() {
 		ListView listView = (ListView) findViewById(android.R.id.list);
@@ -71,6 +72,13 @@ public class NotesPourUneMatiere extends ListActivity {
 			NoteListAdapter adapter = new NoteListAdapter(this, Notes);
 			setListAdapter(adapter);
 		}		
+	}
+	
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		Intent i = new Intent(this, DetailsNote.class);
+		i.putExtra("note", NoteDAO.getNote((int) id));
+		startActivity(i);
 	}
 	
 	@Override

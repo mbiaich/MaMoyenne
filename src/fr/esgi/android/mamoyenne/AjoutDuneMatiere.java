@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AjoutDuneMatiere extends Activity {
 
@@ -48,6 +49,8 @@ public class AjoutDuneMatiere extends Activity {
 	    	Matiere m = new Matiere(txtNomMatiere.getText().toString(), Float.parseFloat(txtCoefficient.getText().toString()));
 	    	matiereDao.createMatiere(m);
 	    	this.startActivity(new Intent(this, ListeDesMatieres.class));
+	    	
+	    	Toast.makeText(getApplicationContext(), "Matière ajoutée !", Toast.LENGTH_LONG).show();
 	    }
 
 }
