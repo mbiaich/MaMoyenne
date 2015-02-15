@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">درجتي المتوسطة</string>
+    <string name="hello_world">أهلاً وسهلاً!</string>
+    <string name="action_settings">الضبط</string>
+    <string name="labelGererNotes">اداره درجاتي</string>
+ 	<string name="addSubject"> إضافة مادة </string>
+ 	<string name="subjectNameLabel">إسم المادة </string>
+ 	<string name="coefLabel">المعدل  </string>
+ 	<string name="register">تسجيل</string>
+ 	<string name="addMark">إضافة درجة </string>
+ 	<string name="mark">درجة </string>
+ 	<string name="coefNote">معدل الدرجة </string>
+ 	<string name="typeExa">نوع الامتحان</string>
+ 	<string name="subjectDetails">تفاصيل المادة </string>
+ 	<string name="modify">تعديل </string>
+ 	<string name="delete">حذف </string>
+ 	<string name="markDetails">تفاصيل الدرجة </string>
+ 	<string name="subjectList">قائمة المواد </string>
+ 	<string name="add">إضافة </string>
+ 	<string name="generalMark">درجتك العامة المتوسطة هي :</string>
+ 	<string name="markManage">اداره درجاتي</string>
+ 	<string name="markFor">الدرجات إلى  : %s</string>
+ 	<string name="average">المتوسط  :</string>
+ 	<string name="mainGeneralMark">%d / 20</string>
+ 	<string name="deletedMark">تم حذف الدرجة !</string>
+ 	<string name="typeExaVal">قيمة الامتحان </string>
+ 	<string name="markValCoef">قيمه المعدل للدرجة </string>
+ 	<string name="noteInputLabel">إدخل درجة</string>
+</resources>
