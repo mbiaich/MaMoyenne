@@ -21,9 +21,9 @@
  	<string name="add">Ajouter</string>
  	<string name="generalMark">Votre Moyenne Generale est de :</string>
  	<string name="markManage">Gérer Mes Notes</string>
- 	<string name="markFor">Notes pour : %s</string>
+ 	<string name="markFor">Notes pour :</string>
  	<string name="average">Moyenne :</string>
- 	<string name="mainGeneralMark">%d / 20</string>
+ 	<string name="mainGeneralMark">/ 20</string>
  	<string name="deletedMark">Note supprimée !</string>
  	<string name="typeExaVal">Valeur type d\'examen</string>
  	<string name="markValCoef">Valeur du coefficient de la note</string>

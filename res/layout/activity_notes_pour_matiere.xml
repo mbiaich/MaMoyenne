@@ -20,18 +20,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:onClick="viewDetailsMatiere"
-            android:textAppearance="@style/subLabelTitles"
-            android:textColor="@android:color/white"
             android:background="@drawable/blue_button"
-            android:text="@string/subjectDetails" />
+            android:onClick="viewDetailsMatiere"
+            android:text="@string/subjectDetails"
+            android:textAppearance="@style/subLabelTitles"
+            android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/ajoutMatiereLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:text="@string/markFor"
             android:textAppearance="@style/LabelTitles" />
 
@@ -53,9 +53,10 @@
 
         <TextView
             android:id="@+id/moyenneMatiereLabel"
-            android:layout_width="100dp"
+            android:layout_width="128dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
+            android:layout_weight="0.19"
             android:background="@drawable/textview_round"
             android:gravity="center"
             android:text="@string/mainGeneralMark"

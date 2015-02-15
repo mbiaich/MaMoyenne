@@ -3,7 +3,6 @@ package fr.esgi.android.mamoyenne.DAO;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
-import fr.esgi.android.mamoyenne.R;
 
 public class DAOBase {
 	

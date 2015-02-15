@@ -1,23 +1,18 @@
 package fr.esgi.android.mamoyenne;
 
-import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
-import fr.esgi.android.mamoyenne.DAO.NoteDAO;
-import fr.esgi.android.mamoyenne.tables.Matiere;
-import fr.esgi.android.mamoyenne.tables.Note;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
+import fr.esgi.android.mamoyenne.tables.Matiere;
 
 public class DetailsMatiere extends Activity {
 	
 	private MatiereDAO matiereDao;
 	private Matiere m;
-	
-	private String nomMatiere;
-	private float coeffMatiere;
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,11 +1,13 @@
 package fr.esgi.android.mamoyenne.DAO;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import fr.esgi.android.mamoyenne.tables.Matiere;
 import fr.esgi.android.mamoyenne.tables.Note;
 
 public class NoteDAO extends DAOBase {
@@ -14,6 +16,8 @@ public class NoteDAO extends DAOBase {
 		super(pContext);
 	}
 
+	MatiereDAO matiereDao;
+	
 	public static final String TABLE_NAME = "note";
 	public static final String IDNOTE = "idNote";
 	public static final String NOTE = "note";
@@ -108,4 +112,20 @@ public class NoteDAO extends DAOBase {
 		n.setIdMatiere(Integer.parseInt(cursor.getString(4)));
 		return n;
 	}
+	
+	public float getMoyenneByMatiere(long idMatiere){
+		
+		DecimalFormat df = new DecimalFormat("0.00");
+		
+		List<Note> notes = getNotes(idMatiere);
+		float cumulNoteAvecCoeff = 0;
+		float cumulCoeff = 0;
+		for(int i=0; i<notes.size();i++){	
+			Note n = notes.get(i);
+			cumulNoteAvecCoeff += n.getNote()*n.getCoefficient();
+			cumulCoeff += n.getCoefficient();
+		}		
+		return Float.parseFloat(df.format(cumulNoteAvecCoeff/cumulCoeff));		
+	}
+	
 }

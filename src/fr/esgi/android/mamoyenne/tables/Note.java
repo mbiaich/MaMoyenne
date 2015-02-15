@@ -2,8 +2,6 @@ package fr.esgi.android.mamoyenne.tables;
 
 import java.io.Serializable;
 
-import fr.esgi.android.mamoyenne.R;
-
 public class Note implements Serializable{
 
 	/**

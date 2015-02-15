@@ -9,10 +9,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
 import fr.esgi.android.mamoyenne.DAO.NoteDAO;
 import fr.esgi.android.mamoyenne.adapters.NoteListAdapter;
-import fr.esgi.android.mamoyenne.tables.Matiere;
 import fr.esgi.android.mamoyenne.tables.Note;
 
 public class NotesPourUneMatiere extends ListActivity {
@@ -29,8 +29,19 @@ public class NotesPourUneMatiere extends ListActivity {
 		matiereDao = new MatiereDAO(this);
 		matiereDao.open();
 		idMatiere = getIntent().getExtras().getLong("idMatiere");
-		refresh();
+		
 		setContentView(R.layout.activity_notes_pour_matiere);
+		
+		//Affichage de la matière
+		TextView newTextMatiere = (TextView) findViewById(R.id.ajoutMatiereLabel);
+		newTextMatiere.setText(getString(R.string.markFor) + " " + matiereDao.getMatiere(idMatiere).getNom().toString());
+			    
+		//Affichage de la moyenne	
+		TextView newTextMoyenne = (TextView)findViewById(R.id.moyenneMatiereLabel);
+		newTextMoyenne.setText(String.valueOf(NoteDAO.getMoyenneByMatiere(idMatiere)) + " " + getString(R.string.mainGeneralMark));
+		
+		refresh();
+		
 	}
 
 	@Override

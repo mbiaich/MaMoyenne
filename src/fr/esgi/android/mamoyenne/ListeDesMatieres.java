@@ -2,18 +2,13 @@ package fr.esgi.android.mamoyenne;
 
 import java.util.List;
 
-import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
 import fr.esgi.android.mamoyenne.adapters.MatiereListAdapter;
 import fr.esgi.android.mamoyenne.tables.Matiere;
