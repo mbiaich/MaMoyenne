@@ -1,19 +1,33 @@
 package fr.esgi.android.mamoyenne;
 
+import fr.esgi.android.mamoyenne.DAO.NoteDAO;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
 
+	NoteDAO noteDao;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        noteDao = new NoteDAO(this);
+        noteDao.open();
+        
         setContentView(R.layout.activity_main);
+        
+        /* AFFICHAGE MOYENNE 
+        System.out.println(String.valueOf(noteDao.getMoyenneGenerale()));
+        
+        TextView newTextMoyenne = (TextView) findViewById(R.id.myenneLabel);
+		newTextMoyenne.setText(String.valueOf(noteDao.getMoyenneGenerale()));*/
     }
 
 
@@ -39,4 +53,10 @@ public class MainActivity extends Activity {
     public void onClick(View v) {
     	this.startActivity(new Intent(this, ListeDesMatieres.class));
     }
+    
+    @Override
+	public void onDestroy(){
+		noteDao.close();
+		super.onDestroy();
+	}
 }

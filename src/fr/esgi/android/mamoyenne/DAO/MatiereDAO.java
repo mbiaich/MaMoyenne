@@ -83,4 +83,5 @@ public class MatiereDAO extends DAOBase {
 		m.setCoefficient(Float.parseFloat(cursor.getString(2)));
 		return m;
 	}
+	
 }
