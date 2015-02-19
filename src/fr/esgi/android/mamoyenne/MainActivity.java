@@ -24,10 +24,9 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         /* AFFICHAGE MOYENNE 
-        System.out.println(String.valueOf(noteDao.getMoyenneGenerale()));
         
         TextView newTextMoyenne = (TextView) findViewById(R.id.myenneLabel);
-		newTextMoyenne.setText(String.valueOf(noteDao.getMoyenneGenerale()));*/
+		newTextMoyenne.setText(noteDao.getMoyenneGenerale());*/
     }
 
 

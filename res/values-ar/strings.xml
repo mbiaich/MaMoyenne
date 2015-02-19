@@ -19,9 +19,9 @@
  	<string name="add">إضافة </string>
  	<string name="generalMark">درجتك العامة المتوسطة هي :</string>
  	<string name="markManage">اداره درجاتي</string>
- 	<string name="markFor">الدرجات إلى  : %s</string>
+ 	<string name="markFor">الدرجات إلى  :</string>
  	<string name="average">المتوسط  :</string>
- 	<string name="mainGeneralMark">%d / 20</string>
+ 	<string name="mainGeneralMark">/ 20</string>
  	<string name="deletedMark">تم حذف الدرجة !</string>
  	<string name="typeExaVal">قيمة الامتحان </string>
  	<string name="markValCoef">قيمه المعدل للدرجة </string>

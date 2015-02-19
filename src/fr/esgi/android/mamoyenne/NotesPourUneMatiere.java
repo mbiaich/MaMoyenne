@@ -38,7 +38,7 @@ public class NotesPourUneMatiere extends ListActivity {
 			    
 		//Affichage de la moyenne	
 		TextView newTextMoyenne = (TextView)findViewById(R.id.moyenneMatiereLabel);
-		newTextMoyenne.setText(String.valueOf(NoteDAO.getMoyenneByMatiere(idMatiere)) + " " + getString(R.string.mainGeneralMark));
+		newTextMoyenne.setText(NoteDAO.getMoyenneByMatiere(idMatiere) + " " + getString(R.string.mainGeneralMark));
 		
 		refresh();
 		

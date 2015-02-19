@@ -19,9 +19,9 @@
  	<string name="add">Add</string>
  	<string name="generalMark">Your Average Generale is:</string>
  	<string name="markManage">Manage my Marks</string>
- 	<string name="markFor">Marks for : %s</string>
+ 	<string name="markFor">Marks for :</string>
  	<string name="average">Average :</string>
- 	<string name="mainGeneralMark">%d / 20</string>
+ 	<string name="mainGeneralMark">/ 20</string>
  	<string name="deletedMark">Mark deleted</string>
  	<string name="typeExaVal">Value type examination</string>
  	<string name="markValCoef">Value of coefficient of Mark</string>

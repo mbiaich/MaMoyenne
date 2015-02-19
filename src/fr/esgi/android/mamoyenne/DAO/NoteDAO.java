@@ -113,7 +113,7 @@ public class NoteDAO extends DAOBase {
 		return n;
 	}
 	
-	public float getMoyenneByMatiere(long idMatiere){
+	public String getMoyenneByMatiere(long idMatiere){
 		
 		DecimalFormat df = new DecimalFormat("0.00");
 		
@@ -125,10 +125,10 @@ public class NoteDAO extends DAOBase {
 			cumulNoteAvecCoeff += n.getNote()*n.getCoefficient();
 			cumulCoeff += n.getCoefficient();
 		}		
-		return Float.parseFloat(df.format(cumulNoteAvecCoeff/cumulCoeff));		
+		return df.format(cumulNoteAvecCoeff/cumulCoeff);	
 	}
 	
-	public float getMoyenneGenerale(){
+	public String getMoyenneGenerale(){
 		
 		DecimalFormat df = new DecimalFormat("0.00");
 		
@@ -138,10 +138,10 @@ public class NoteDAO extends DAOBase {
 		for(int i=0; i<matieres.size();i++){	
 			Matiere m = matieres.get(i);
 			long idMatiere = m.getIdMatiere();			
-			cumulMoyenneAvecCoeff += getMoyenneByMatiere(idMatiere)*m.getCoefficient();
+			cumulMoyenneAvecCoeff += Float.parseFloat(getMoyenneByMatiere(idMatiere))*m.getCoefficient();
 			cumulCoeff += m.getCoefficient();
 		}		
-		return Float.parseFloat(df.format(cumulMoyenneAvecCoeff/cumulCoeff));		
+		return df.format(cumulMoyenneAvecCoeff/cumulCoeff);		
 	}
 	
 }
