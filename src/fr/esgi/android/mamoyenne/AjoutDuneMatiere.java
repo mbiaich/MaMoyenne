@@ -47,17 +47,14 @@ public class AjoutDuneMatiere extends Activity {
 	    	EditText txtCoefficient = (EditText) findViewById(R.id.coefficietMatiereInput);
 	    	
 	    	if (String.valueOf(txtNomMatiere.getText().toString()).isEmpty() || String.valueOf(txtCoefficient.getText()).isEmpty()) {
-	    		Toast.makeText(getApplicationContext(), "Erreur ! Veuillez remplir tous les champs.", Toast.LENGTH_LONG).show();
+	    		Toast.makeText(getApplicationContext(), getString(R.string.errorEmptyFieldsToast), Toast.LENGTH_LONG).show();
 	    	} else if (Float.parseFloat(txtCoefficient.getText().toString()) > 10 || Float.parseFloat(txtCoefficient.getText().toString()) < 1){
-	    		Toast.makeText(getApplicationContext(), "Erreur ! Veuillez saisir un coefficient compris entre 1 et 10", Toast.LENGTH_LONG).show();
+	    		Toast.makeText(getApplicationContext(), getString(R.string.errorCoeffToast), Toast.LENGTH_LONG).show();
 	    	} else {
-	    	Matiere m = new Matiere(txtNomMatiere.getText().toString(), Float.parseFloat(txtCoefficient.getText().toString()));
-	    	matiereDao.createMatiere(m);
-	    	finish();	    	
-	    	Toast.makeText(getApplicationContext(), "Matière créé !", Toast.LENGTH_LONG).show();
-	    	
-	    	
-	    	
+		    	Matiere m = new Matiere(txtNomMatiere.getText().toString(), Float.parseFloat(txtCoefficient.getText().toString()));
+		    	matiereDao.createMatiere(m);
+		    	finish();	    	
+		    	Toast.makeText(getApplicationContext(), getString(R.string.createFieldToast), Toast.LENGTH_LONG).show();	    	
 	    	}
 	    }
 	    

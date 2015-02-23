@@ -26,4 +26,20 @@
  	<string name="typeExaVal">Value type examination</string>
  	<string name="markValCoef">Value of coefficient of Mark</string>
  	<string name="noteInputLabel">Entgering Mark</string>
+ 	<string name="errorCoeffToast">Error! Please enter a coefficient between 1 and 10.</string>
+ 	<string name="errorMarkToast">Error! Please enter a mark between 0 and 20.</string>
+ 	<string name="errorEmptyFieldsToast">Error! Please complete all fields.</string>
+ 	<string name="createMarkToast">Mark created !</string>
+ 	<string name="updateMarkToast">Mark updated !</string>
+ 	<string name="deleteMarkToast">Mark deleted !</string>
+ 	<string name="createFieldToast">Field created !</string>
+ 	<string name="updateFieldToast">Field updated !</string>
+ 	<string name="deleteFieldToast">Field deleted !</string>
+ 	<string name="dialogWarning">Warning</string>
+ 	<string name="dialogYes">Yes</string>
+ 	<string name="dialogNo">No</string>
+ 	<string name="dialogAskUpdateMark">Are you sure that you want to update this mark?</string>
+ 	<string name="dialogAskDeleteMark">Are you sure that you want to delete this mark?</string>
+ 	<string name="dialogAskUpdateField">Are you sure that you want to update this field?</string>
+ 	<string name="dialogAskDeleteField">Are you sure that you want to delete this field?</string>
 </resources>

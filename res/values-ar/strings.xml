@@ -26,4 +26,20 @@
  	<string name="typeExaVal">قيمة الامتحان </string>
  	<string name="markValCoef">قيمه المعدل للدرجة </string>
  	<string name="noteInputLabel">إدخل درجة</string>
+ 	<string name="errorCoeffToast">خطأ ! من فضلك ادخل قاسما مشتركا بين 1 و 10</string>
+ 	<string name="errorMarkToast">خطأ ! من فضلك ادخل على درجة بين 0 و 20</string>
+ 	<string name="errorEmptyFieldsToast">خطأ ! يرجى تعبئة جميع الحقول .</string>
+ 	<string name="createMarkToast">ملاحظة خلقت</string>
+ 	<string name="updateMarkToast">ملاحظة تغير</string>
+ 	<string name="deleteMarkToast">ملاحظة حذفها</string>
+ 	<string name="createFieldToast">المواد خلقت</string>
+ 	<string name="updateFieldToast">المواد المعدلة</string>
+ 	<string name="deleteFieldToast">المواد التي تم إزالتها</string> 	
+ 	<string name="dialogWarning">احترس</string>
+ 	<string name="dialogYes">نعم</string>
+ 	<string name="dialogNo">لا</string>
+ 	<string name="dialogAskUpdateMark">هل أنت متأكد أنك تريد تغيير هذه الملاحظة؟</string>
+ 	<string name="dialogAskDeleteMark">هل أنت متأكد أنك تريد حذف هذه الملاحظة؟</string>
+ 	<string name="dialogAskUpdateField">هل أنت متأكد أنك تريد تغيير هذا الأمر؟</string>
+ 	<string name="dialogAskDeleteField">هل أنت متأكد أنك تريد حذف هذه المواد ؟</string>
 </resources>

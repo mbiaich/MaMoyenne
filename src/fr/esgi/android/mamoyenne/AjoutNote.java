@@ -49,16 +49,16 @@ public class AjoutNote extends Activity {
 	    	EditText txtTypeExamInput = (EditText) findViewById(R.id.typeExamInput);
 	    	
 	    	if (String.valueOf(noteValue.getText().toString()).isEmpty() || String.valueOf(txtCoefficient.getText()).isEmpty() || String.valueOf(txtTypeExamInput.getText()).isEmpty() ){
-	    		Toast.makeText(getApplicationContext(), "Erreur ! Veuillez remplir tous les champs.", Toast.LENGTH_LONG).show();
+	    		Toast.makeText(getApplicationContext(), getString(R.string.errorEmptyFieldsToast), Toast.LENGTH_LONG).show();
 	    	} else if(Float.parseFloat(noteValue.getText().toString()) > 20 || Float.parseFloat(noteValue.getText().toString()) < 0){
-	    		Toast.makeText(getApplicationContext(), "Erreur ! Veuillez saisir une note comprise entre 0 et 20", Toast.LENGTH_LONG).show();
+	    		Toast.makeText(getApplicationContext(), getString(R.string.errorMarkToast), Toast.LENGTH_LONG).show();
 	    	} else if (Float.parseFloat(txtCoefficient.getText().toString()) > 10 || Float.parseFloat(txtCoefficient.getText().toString()) < 1){
-	    		Toast.makeText(getApplicationContext(), "Erreur ! Veuillez saisir un coefficient compris entre 1 et 10", Toast.LENGTH_LONG).show();
+	    		Toast.makeText(getApplicationContext(), getString(R.string.errorCoeffToast), Toast.LENGTH_LONG).show();
 	    	} else {
 	    		Note n = new Note(Float.parseFloat(noteValue.getText().toString()),Float.parseFloat(txtCoefficient.getText().toString()),txtTypeExamInput.getText().toString(),idMatiere);
 		    	noteDao.createNote(n);
 				finish();
-				Toast.makeText(getApplicationContext(), "Note ajoutée !", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), getString(R.string.createMarkToast), Toast.LENGTH_LONG).show();
 	    	}	    	
 	    }
 	    

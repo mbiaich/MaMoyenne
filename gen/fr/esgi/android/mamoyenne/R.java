@@ -102,8 +102,22 @@ public final class R {
         public static final int average=0x7f060015;
         public static final int coefLabel=0x7f060006;
         public static final int coefNote=0x7f06000a;
+        public static final int createFieldToast=0x7f060021;
+        public static final int createMarkToast=0x7f06001e;
         public static final int delete=0x7f06000e;
+        public static final int deleteFieldToast=0x7f060023;
+        public static final int deleteMarkToast=0x7f060020;
         public static final int deletedMark=0x7f060017;
+        public static final int dialogAskDeleteField=0x7f06002a;
+        public static final int dialogAskDeleteMark=0x7f060028;
+        public static final int dialogAskUpdateField=0x7f060029;
+        public static final int dialogAskUpdateMark=0x7f060027;
+        public static final int dialogNo=0x7f060026;
+        public static final int dialogWarning=0x7f060024;
+        public static final int dialogYes=0x7f060025;
+        public static final int errorCoeffToast=0x7f06001b;
+        public static final int errorEmptyFieldsToast=0x7f06001d;
+        public static final int errorMarkToast=0x7f06001c;
         public static final int generalMark=0x7f060012;
         public static final int hello_world=0x7f060001;
         public static final int labelGererNotes=0x7f060003;
@@ -121,6 +135,8 @@ public final class R {
         public static final int subjectNameLabel=0x7f060005;
         public static final int typeExa=0x7f06000b;
         public static final int typeExaVal=0x7f060018;
+        public static final int updateFieldToast=0x7f060022;
+        public static final int updateMarkToast=0x7f06001f;
     }
     public static final class style {
         /** 

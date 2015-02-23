@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">Ma Moyenne</string>
+ 	<string name="app_name">Ma Moyenne</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="labelGererNotes">Gérer Mes Notes</string>
@@ -28,6 +26,20 @@
  	<string name="typeExaVal">Valeur type d\'examen</string>
  	<string name="markValCoef">Valeur du coefficient de la note</string>
  	<string name="noteInputLabel">Saisie de note</string>
- 	
-
+ 	<string name="errorCoeffToast">Erreur ! Veuillez saisir un coefficient compris entre 1 et 10.</string>
+ 	<string name="errorMarkToast">Erreur ! Veuillez saisir une note comprise entre 0 et 20.</string>
+ 	<string name="errorEmptyFieldsToast">Erreur ! Veuillez remplir tous les champs.</string>
+ 	<string name="createMarkToast">Note créé !</string>
+ 	<string name="updateMarkToast">Note modifiée !</string>
+ 	<string name="deleteMarkToast">Note supprimée !</string>
+ 	<string name="createFieldToast">Matière créé !</string>
+ 	<string name="updateFieldToast">Matière modifiée !</string>
+ 	<string name="deleteFieldToast">Matière supprimée !</string> 	
+ 	<string name="dialogWarning">Attention</string>
+ 	<string name="dialogYes">Oui</string>
+ 	<string name="dialogNo">Non</string>
+ 	<string name="dialogAskUpdateMark">Êtes-vous sûr de vouloir modifier cette note ?</string>
+ 	<string name="dialogAskDeleteMark">Êtes-vous sûr de vouloir supprimer cette note ?</string>
+ 	<string name="dialogAskUpdateField">Êtes-vous sûr de vouloir modifier cette matière ?</string>
+ 	<string name="dialogAskDeleteField">Êtes-vous sûr de vouloir supprimer cette matière ?</string>
 </resources>

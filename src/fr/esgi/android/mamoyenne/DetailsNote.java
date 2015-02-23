@@ -17,8 +17,7 @@ public class DetailsNote extends Activity {
 	
 	private NoteDAO noteDao;
 	private Note n;
-	
-	
+		
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,9 +39,9 @@ public class DetailsNote extends Activity {
 	
 	public void deleteNote(View v) {
 		Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("Attention");
-		builder.setMessage("Êtes-vous sûr de vouloir supprimer cette note ?");
-		builder.setPositiveButton("Oui", new OnClickListener() {
+		builder.setTitle(getString(R.string.dialogWarning));
+		builder.setMessage(getString(R.string.dialogAskDeleteMark));
+		builder.setPositiveButton(getString(R.string.dialogYes), new OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 	    	noteDao.deleteNote(n.getIdNote());
@@ -50,10 +49,10 @@ public class DetailsNote extends Activity {
 				i.putExtra("idMatiere", n.getIdMatiere());
 				startActivity(i);
 				
-				Toast.makeText(getApplicationContext(), "Note supprimée", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(),getString(R.string.deletedMark), Toast.LENGTH_LONG).show();
 			}
 		});
-		builder.setNegativeButton("Non", new OnClickListener() {
+		builder.setNegativeButton(getString(R.string.dialogNo), new OnClickListener() {
 		@Override
 		public void onClick(DialogInterface dialog, int which) {
 		// ne fait rien
@@ -64,10 +63,11 @@ public class DetailsNote extends Activity {
     }
 	
 	public void updateNote(View v) {
+		
 		Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("Attention");
-		builder.setMessage("Voulez-vous modifier cette note ?");
-		builder.setPositiveButton("Oui", new OnClickListener() {
+		builder.setTitle(getString(R.string.dialogWarning));
+		builder.setMessage(getString(R.string.dialogAskUpdateMark));
+		builder.setPositiveButton(getString(R.string.dialogYes), new OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {		
 				EditText editTextNote = (EditText)findViewById(R.id.valeurNoteLabel);    
@@ -75,22 +75,22 @@ public class DetailsNote extends Activity {
 				EditText editValeurTypeExa = (EditText)findViewById(R.id.valeurTypeExam);    
 		
 				if (String.valueOf(editTextNote.getText().toString()).isEmpty() || String.valueOf(editTextCoeff.getText()).isEmpty() || String.valueOf(editValeurTypeExa.getText()).isEmpty() ){
-		    		Toast.makeText(getApplicationContext(), "Erreur ! Veuillez remplir tous les champs.", Toast.LENGTH_LONG).show();
+		    		Toast.makeText(getApplicationContext(), getString(R.string.errorEmptyFieldsToast), Toast.LENGTH_LONG).show();
 				} else if(Float.parseFloat(editTextNote.getText().toString()) > 20 || Float.parseFloat(editTextNote.getText().toString()) < 0){
-		    		Toast.makeText(getApplicationContext(), "Erreur ! Veuillez saisir une note comprise entre 0 et 20", Toast.LENGTH_LONG).show();
+		    		Toast.makeText(getApplicationContext(), getString(R.string.errorMarkToast), Toast.LENGTH_LONG).show();
 		    	} else if (Float.parseFloat(editTextCoeff.getText().toString()) > 10 || Float.parseFloat(editTextCoeff.getText().toString()) < 1){
-		    		Toast.makeText(getApplicationContext(), "Erreur ! Veuillez saisir un coefficient compris entre 1 et 10", Toast.LENGTH_LONG).show();
+		    		Toast.makeText(getApplicationContext(), getString(R.string.errorCoeffToast), Toast.LENGTH_LONG).show();
 		    	} 
 		    	else {
 			        n.setNote(Float.parseFloat(editTextNote.getText().toString()));
 			        n.setCoefficient(Float.parseFloat(editTextCoeff.getText().toString()));
 			        n.setTypeExamen(editValeurTypeExa.getText().toString());		
 			        noteDao.updateNote(n);		
-					Toast.makeText(getApplicationContext(), "Note modifiée !", Toast.LENGTH_LONG).show();
+					Toast.makeText(getApplicationContext(), getString(R.string.updateMarkToast), Toast.LENGTH_LONG).show();
 		    	}
 			}
 		});
-		builder.setNegativeButton("Non", new OnClickListener() {
+		builder.setNegativeButton(getString(R.string.dialogNo), new OnClickListener() {
 		@Override
 		public void onClick(DialogInterface dialog, int which) {
 		// ne fait rien
