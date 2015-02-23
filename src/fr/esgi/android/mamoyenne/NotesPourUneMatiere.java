@@ -43,6 +43,13 @@ public class NotesPourUneMatiere extends ListActivity {
 		refresh();
 		
 	}
+	
+	@Override
+	protected void onRestart() {
+		refresh();
+		super.onRestart();
+		
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -82,7 +89,13 @@ public class NotesPourUneMatiere extends ListActivity {
 		if (!Notes.isEmpty()) {
 			NoteListAdapter adapter = new NoteListAdapter(this, Notes);
 			setListAdapter(adapter);
-		}		
+		}
+		
+		TextView newTextMatiere = (TextView) findViewById(R.id.ajoutMatiereLabel);
+		newTextMatiere.setText(getString(R.string.markFor) + " " + matiereDao.getMatiere(idMatiere).getNom().toString());
+		
+		TextView newTextMoyenne = (TextView)findViewById(R.id.moyenneMatiereLabel);
+		newTextMoyenne.setText(NoteDAO.getMoyenneByMatiere(idMatiere) + " " + getString(R.string.mainGeneralMark));
 	}
 	
 	@Override
@@ -91,6 +104,8 @@ public class NotesPourUneMatiere extends ListActivity {
 		i.putExtra("note", NoteDAO.getNote((int) id));
 		startActivity(i);
 	}
+	
+	
 	
 	@Override
 	public void onDestroy(){

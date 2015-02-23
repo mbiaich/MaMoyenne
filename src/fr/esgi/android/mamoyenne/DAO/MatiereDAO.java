@@ -6,6 +6,7 @@ import java.util.List;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.util.Log;
 import fr.esgi.android.mamoyenne.tables.Matiere;
 
 public class MatiereDAO extends DAOBase {
@@ -25,12 +26,24 @@ public class MatiereDAO extends DAOBase {
 
 	public static final String TABLE_DROP = "DROP TABLE IF EXISTS "
 			+ TABLE_NAME + ";";
+	
+	private static final String LOGUPDATE = "MatiereDAO - update";
+	private static final String LOGCREATE = "MatiereDAO - create";
 
 	public void createMatiere(Matiere m) {
+		
+		if (m.getCoefficient() < 11 &&  m.getCoefficient() > 0 && !String.valueOf(m.getCoefficient()).isEmpty() 
+				&& !m.getNom().isEmpty())
+		{
 		ContentValues value = new ContentValues();
 		value.put(NOM, m.getNom());
 		value.put(COEFFICIENT, m.getCoefficient());
-		mDb.insert(TABLE_NAME, IDMATIERE, value);
+		mDb.insert(TABLE_NAME, IDMATIERE, value);		
+			Log.i(LOGCREATE, "La matière : "+m.getNom()+" a été créée.");
+		}
+		else {
+    		Log.e(LOGCREATE, "La matière : "+m.getNom()+" n'a pas été créée.");
+    	}
 	}
 
 	public void deleteMatiere(long id) {
@@ -41,11 +54,21 @@ public class MatiereDAO extends DAOBase {
 	
 	
 	public void updateMatiere(Matiere m) {
-		ContentValues value = new ContentValues();
-		value.put(NOM, m.getNom());
-		value.put(COEFFICIENT, m.getCoefficient());
-		mDb.update(TABLE_NAME, value, IDMATIERE + " = ?",
-				new String[] { String.valueOf(m.getIdMatiere()) });
+		
+		if (m.getCoefficient() < 11 &&  m.getCoefficient() > 0 && !String.valueOf(m.getCoefficient()).isEmpty() 
+				&& !m.getNom().isEmpty())
+		{
+			ContentValues value = new ContentValues();
+			value.put(NOM, m.getNom());
+			value.put(COEFFICIENT, m.getCoefficient());
+			mDb.update(TABLE_NAME, value, IDMATIERE + " = ?",
+					new String[] { String.valueOf(m.getIdMatiere()) });   		
+			Log.i(LOGUPDATE, "La matière : "+m.getNom()+" a été modifiée.");
+		}
+		else 
+		{
+    		Log.e(LOGUPDATE, "La matière : "+m.getNom()+" n'a pas été modifiée.");
+    	}
 	}
 
 

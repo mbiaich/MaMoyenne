@@ -25,6 +25,13 @@ public class ListeDesMatieres extends ListActivity {
 		refresh();
 		setContentView(R.layout.activity_liste_matieres);
 	}
+	
+	@Override
+	protected void onRestart() {
+		// TODO Auto-generated method stub
+		super.onRestart();
+		refresh();
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

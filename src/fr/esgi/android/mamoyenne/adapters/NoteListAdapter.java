@@ -3,6 +3,7 @@ package fr.esgi.android.mamoyenne.adapters;
 import java.util.List;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +45,7 @@ public class NoteListAdapter extends BaseAdapter {
 		Note note = (Note) getItem(position);
 		convertView = inflater.inflate(R.layout.list_view_note, null);
 		TextView txtRowListNote = (TextView) convertView.findViewById(R.id.txt_row_liste_note);
+		txtRowListNote.setTextColor(Color.WHITE);
 		txtRowListNote.setText(note.getNote().toString());
 		return convertView;
 	}

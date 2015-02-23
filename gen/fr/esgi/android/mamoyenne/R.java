@@ -59,10 +59,10 @@ public final class R {
         public static final int coefficietMatiereInput=0x7f090004;
         public static final int detailMatiereButton=0x7f090016;
         public static final int detailMatiereLabel=0x7f09000b;
-        public static final int gestionNotes=0x7f090015;
+        public static final int gestionNotes=0x7f090014;
         public static final int idnoteLabel=0x7f090017;
         public static final int listeMatieresLabel=0x7f090012;
-        public static final int messageAccueil=0x7f090014;
+        public static final int messageAccueil=0x7f090015;
         public static final int modify=0x7f09000d;
         public static final int moyenneMatiereLabel=0x7f090018;
         public static final int myenneLabel=0x7f090013;

@@ -33,6 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="@android:color/white" 
             android:inputType="numberDecimal" >
 
             <requestFocus />
@@ -50,6 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="@android:color/white" 
             android:inputType="numberSigned" />
 
         <TextView
@@ -64,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:textColor="@android:color/white" 
             android:inputType="text" />
 
         <Button

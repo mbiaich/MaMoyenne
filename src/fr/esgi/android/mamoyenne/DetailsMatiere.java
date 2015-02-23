@@ -1,6 +1,10 @@
 package fr.esgi.android.mamoyenne;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -31,31 +35,73 @@ public class DetailsMatiere extends Activity {
     }	
 	
 	public void deleteMatiere(View v) {
-		Intent i = new Intent(this, ListeDesMatieres.class);
-    	matiereDao.deleteMatiere(m.getIdMatiere());
-		startActivity(i);
+		Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Attention");
+		builder.setMessage("Êtes-vous sûr de vouloir supprimer cette matière ?");
+		builder.setPositiveButton("Oui", new OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
 		
-		Toast.makeText(getApplicationContext(), "Matière supprimée !", Toast.LENGTH_LONG).show();
-    }
+				Intent i = new Intent(DetailsMatiere.this, ListeDesMatieres.class);
+		    	matiereDao.deleteMatiere(m.getIdMatiere());
+				startActivity(i);
+				
+				Toast.makeText(getApplicationContext(), "Matière supprimée !", Toast.LENGTH_LONG).show();
+		    }
+		});
+		builder.setNegativeButton("Non", new OnClickListener() {
+		@Override
+		public void onClick(DialogInterface dialog, int which) {
+		// ne fait rien
+		}
+		});
+		builder.setIcon(android.R.drawable.ic_dialog_alert);
+		builder.show();
+	}
 	
 	public void updateMatiere(View v) {
-		EditText editTextNom = (EditText)findViewById(R.id.nomMatiereInput);    
-        EditText editTextCoeff = (EditText)findViewById(R.id.coefficietMatiereInput);
-        
-        m.setNom(editTextNom.getText().toString());
-        m.setCoefficient(Float.parseFloat(editTextCoeff.getText().toString()));
-		
-        matiereDao.updateMatiere(m);
-		Intent i = new Intent(this, DetailsMatiere.class);
-		i.putExtra("matiere", m);
-		startActivity(i);
-		
-		Toast.makeText(getApplicationContext(), "Matière modifiée !", Toast.LENGTH_LONG).show();
+		Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Attention");
+		builder.setMessage("Voulez-vous modifier cette matière ?");
+		builder.setPositiveButton("Oui", new OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				EditText editTextNom = (EditText)findViewById(R.id.nomMatiereInput);    
+		        EditText editTextCoeff = (EditText)findViewById(R.id.coefficietMatiereInput);
+		        
+		        if (String.valueOf(editTextNom.getText().toString()).isEmpty() || String.valueOf(editTextCoeff.getText()).isEmpty()) {
+		    		Toast.makeText(getApplicationContext(), "Erreur ! Veuillez remplir tous les champs.", Toast.LENGTH_LONG).show();
+		    	} else if (Float.parseFloat(editTextCoeff.getText().toString()) > 10 || Float.parseFloat(editTextCoeff.getText().toString()) < 1){
+		    		Toast.makeText(getApplicationContext(), "Erreur ! Veuillez saisir un coefficient compris entre 1 et 10", Toast.LENGTH_LONG).show();
+		    	} else {    
+			        m.setNom(editTextNom.getText().toString());
+			        m.setCoefficient(Float.parseFloat(editTextCoeff.getText().toString()));
+			        matiereDao.updateMatiere(m);
+			        Toast.makeText(getApplicationContext(), "Matière modifiée !", Toast.LENGTH_LONG).show();
+		    	}
+		}});
+		builder.setNegativeButton("Non", new OnClickListener() {
+		@Override
+		public void onClick(DialogInterface dialog, int which) {
+		// ne fait rien
+		}
+		});
+		builder.setIcon(android.R.drawable.ic_dialog_alert);
+		builder.show();
     }
+	
+	@Override
+	protected void onStop() {
+		finish();
+		super.onStop();
+	}
 		
 	@Override
-	public void onDestroy(){
+	public void onDestroy() {
 		matiereDao.close();
 		super.onDestroy();
+		
 	}
 }

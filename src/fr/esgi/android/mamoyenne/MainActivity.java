@@ -23,12 +23,15 @@ public class MainActivity extends Activity {
         
         setContentView(R.layout.activity_main);
         
-        /* AFFICHAGE MOYENNE 
-        
         TextView newTextMoyenne = (TextView) findViewById(R.id.myenneLabel);
-		newTextMoyenne.setText(noteDao.getMoyenneGenerale());*/
+		newTextMoyenne.setText(noteDao.getMoyenneGenerale(this).toString() + " " + getString(R.string.mainGeneralMark));
     }
 
+    @Override
+    protected void onRestart() {
+    	refresh();
+    	super.onRestart();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -51,6 +54,11 @@ public class MainActivity extends Activity {
     
     public void onClick(View v) {
     	this.startActivity(new Intent(this, ListeDesMatieres.class));
+    }
+    
+    public void refresh(){
+    	TextView newTextMoyenne = (TextView) findViewById(R.id.myenneLabel);
+		newTextMoyenne.setText(noteDao.getMoyenneGenerale(this).toString() + " " + getString(R.string.mainGeneralMark));
     }
     
     @Override

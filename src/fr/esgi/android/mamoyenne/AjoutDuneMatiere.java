@@ -3,7 +3,6 @@ package fr.esgi.android.mamoyenne;
 import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
 import fr.esgi.android.mamoyenne.tables.Matiere;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -46,11 +45,32 @@ public class AjoutDuneMatiere extends Activity {
 	    public void createMatiere(View v) {
 	    	EditText txtNomMatiere = (EditText) findViewById(R.id.nomMatiereInput);
 	    	EditText txtCoefficient = (EditText) findViewById(R.id.coefficietMatiereInput);
+	    	
+	    	if (String.valueOf(txtNomMatiere.getText().toString()).isEmpty() || String.valueOf(txtCoefficient.getText()).isEmpty()) {
+	    		Toast.makeText(getApplicationContext(), "Erreur ! Veuillez remplir tous les champs.", Toast.LENGTH_LONG).show();
+	    	} else if (Float.parseFloat(txtCoefficient.getText().toString()) > 10 || Float.parseFloat(txtCoefficient.getText().toString()) < 1){
+	    		Toast.makeText(getApplicationContext(), "Erreur ! Veuillez saisir un coefficient compris entre 1 et 10", Toast.LENGTH_LONG).show();
+	    	} else {
 	    	Matiere m = new Matiere(txtNomMatiere.getText().toString(), Float.parseFloat(txtCoefficient.getText().toString()));
 	    	matiereDao.createMatiere(m);
-	    	this.startActivity(new Intent(this, ListeDesMatieres.class));
+	    	finish();	    	
+	    	Toast.makeText(getApplicationContext(), "Matière créé !", Toast.LENGTH_LONG).show();
 	    	
-	    	Toast.makeText(getApplicationContext(), "Matière ajoutée !", Toast.LENGTH_LONG).show();
+	    	
+	    	
+	    	}
 	    }
+	    
+	    @Override
+		protected void onStop() {
+			super.onStop();
+			finish();
+		}
+			
+		@Override
+		public void onDestroy(){
+			matiereDao.close();
+			super.onDestroy();
+		}
 
 }

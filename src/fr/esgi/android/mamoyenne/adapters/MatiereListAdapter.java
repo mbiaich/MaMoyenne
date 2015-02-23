@@ -3,6 +3,7 @@ package fr.esgi.android.mamoyenne.adapters;
 import java.util.List;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +45,7 @@ public class MatiereListAdapter extends BaseAdapter {
 		Matiere matiere = (Matiere) getItem(position);
 		convertView = inflater.inflate(R.layout.list_view_matiere, null);
 		TextView txtRowListMatiere = (TextView) convertView.findViewById(R.id.txt_row_liste_matiere);
+		txtRowListMatiere.setTextColor(Color.WHITE);
 		txtRowListMatiere.setText(matiere.getNom());
 		return convertView;
 	}

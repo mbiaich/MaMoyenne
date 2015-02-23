@@ -38,7 +38,8 @@
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="text" >
+            android:inputType="text"
+            android:textColor="@android:color/white" >
 
             <requestFocus android:layout_width="wrap_content" />
         </EditText>
@@ -59,7 +60,8 @@
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number" 
+            android:textColor="@android:color/white" />
 
         <LinearLayout
             android:layout_width="match_parent"

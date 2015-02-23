@@ -13,13 +13,13 @@
         android:id="@+id/myenneLabel"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:textColor="@android:color/white"
-        android:textSize="12pt"
-        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@+id/gestionNotes"
+        android:layout_alignRight="@+id/gestionNotes"
         android:layout_centerVertical="true"
-        android:background="@drawable/textview_round"
         android:gravity="center"
-        android:text="@string/mainGeneralMark" />
+        android:text="@string/mainGeneralMark"
+        android:textColor="@android:color/white"
+        android:textSize="12pt" />
 
     <TextView
         android:id="@+id/messageAccueil"
