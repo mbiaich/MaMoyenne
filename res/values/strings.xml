@@ -29,10 +29,10 @@
  	<string name="errorCoeffToast">Erreur ! Veuillez saisir un coefficient compris entre 1 et 10.</string>
  	<string name="errorMarkToast">Erreur ! Veuillez saisir une note comprise entre 0 et 20.</string>
  	<string name="errorEmptyFieldsToast">Erreur ! Veuillez remplir tous les champs.</string>
- 	<string name="createMarkToast">Note créé !</string>
+ 	<string name="createMarkToast">Note créée !</string>
  	<string name="updateMarkToast">Note modifiée !</string>
  	<string name="deleteMarkToast">Note supprimée !</string>
- 	<string name="createFieldToast">Matière créé !</string>
+ 	<string name="createFieldToast">Matière créée !</string>
  	<string name="updateFieldToast">Matière modifiée !</string>
  	<string name="deleteFieldToast">Matière supprimée !</string> 	
  	<string name="dialogWarning">Attention</string>
