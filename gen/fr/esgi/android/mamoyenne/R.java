@@ -50,7 +50,7 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f09001c;
-        public static final int addButton=0x7f090019;
+        public static final int addButton=0x7f090017;
         public static final int ajoutMatiereLabel=0x7f090000;
         public static final int btnFrmCreateMatiere=0x7f09000e;
         public static final int coefInput=0x7f090008;
@@ -60,11 +60,11 @@ public final class R {
         public static final int detailMatiereButton=0x7f090016;
         public static final int detailMatiereLabel=0x7f09000b;
         public static final int gestionNotes=0x7f090014;
-        public static final int idnoteLabel=0x7f090017;
+        public static final int idnoteLabel=0x7f090018;
         public static final int listeMatieresLabel=0x7f090012;
         public static final int messageAccueil=0x7f090015;
         public static final int modify=0x7f09000d;
-        public static final int moyenneMatiereLabel=0x7f090018;
+        public static final int moyenneMatiereLabel=0x7f090019;
         public static final int myenneLabel=0x7f090013;
         public static final int nomMatiereInput=0x7f090002;
         public static final int nomMatiereLabel=0x7f090001;

@@ -5,9 +5,22 @@
     android:background="@color/_background" >
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnFrmCreateMatiere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_marginLeft="5dp"
+			android:layout_marginTop="5dp"
+            android:layout_gravity="right"
+            android:onClick="frmAjoutMatiere"
+            android:text="@string/add"
+            android:textColor="@color/blue"
+            android:textSize="13pt"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/listeMatieresLabel"
@@ -15,6 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginBottom="50dp"
+            android:layout_weight="20"
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="@string/subjectList"
@@ -23,20 +37,14 @@
         <ListView
             android:id="@android:id/list"
             android:layout_width="match_parent"
+            android:layout_weight="100"
             android:layout_height="222dp" 
             android:textColor="@android:color/white" 
+            android:minHeight="?android:attr/listPreferredItemHeight"
             >
         </ListView>
 
-        <Button
-            android:id="@+id/btnFrmCreateMatiere"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/green_button"
-            android:onClick="frmAjoutMatiere"
-            android:text="@string/add" />
+        
     </LinearLayout>
 
 </ScrollView>
