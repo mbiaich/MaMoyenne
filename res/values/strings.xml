@@ -16,7 +16,7 @@
  	<string name="delete">Supprimer</string>
  	<string name="markDetails">Details notes</string>
  	<string name="subjectList">Liste Matiere</string>
- 	<string name="add">Ajouter</string>
+ 	<string name="add">+</string>
  	<string name="generalMark">Votre Moyenne Generale est de :</string>
  	<string name="markManage">Gérer Mes Notes</string>
  	<string name="markFor">Notes pour :</string>
