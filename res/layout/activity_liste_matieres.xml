@@ -18,8 +18,9 @@
             android:layout_gravity="right"
             android:onClick="frmAjoutMatiere"
             android:text="@string/add"
-            android:textColor="@color/blue"
-            android:textSize="13pt"
+            android:background="@android:color/transparent"
+            android:textColor="@color/green"
+            android:textSize="14pt"
             android:textStyle="bold" />
 
         <TextView
