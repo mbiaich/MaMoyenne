@@ -16,7 +16,7 @@
  	<string name="delete">حذف </string>
  	<string name="markDetails">تفاصيل الدرجة </string>
  	<string name="subjectList">قائمة المواد </string>
- 	<string name="add">إضافة </string>
+ 	<string name="add">+</string>
  	<string name="generalMark">درجتك العامة المتوسطة هي :</string>
  	<string name="markManage">اداره درجاتي</string>
  	<string name="markFor">الدرجات إلى  :</string>
