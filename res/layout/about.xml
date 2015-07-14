@@ -18,7 +18,7 @@
         android:layout_marginTop="148dp"
         android:gravity="center"
         android:singleLine="false"
-        android:text="@string/help"
+        android:text="@string/about"
         android:textAppearance="@style/LabelTitles" />
   
 </RelativeLayout>
