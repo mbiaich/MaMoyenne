@@ -42,4 +42,8 @@
  	<string name="dialogAskDeleteMark">Êtes-vous sûr de vouloir supprimer cette note ?</string>
  	<string name="dialogAskUpdateField">Êtes-vous sûr de vouloir modifier cette matière ?</string>
  	<string name="dialogAskDeleteField">Êtes-vous sûr de vouloir supprimer cette matière ?</string>
+ 	<string name="about">Cette Application permet la gestion de vos notes au cours d\'une année scolaire. Vous pouvez ajouter des matières ainsi que des notes avec des intitulés et des coefficients .</string>
+ 	<string name="help">Pour demander de l\'aide veuillez envoyer un mail à mamoyenne@gmail.com</string>
+ 	<string name="actionHelp">Aide</string>
+ 	<string name="actionAbout">A propos</string>
 </resources>

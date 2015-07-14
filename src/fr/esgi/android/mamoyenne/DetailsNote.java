@@ -9,6 +9,8 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -111,4 +113,6 @@ public class DetailsNote extends Activity {
 		noteDao.close();
 		super.onDestroy();
 	}
+	
+	
 }

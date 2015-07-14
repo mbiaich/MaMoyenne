@@ -1,0 +1,49 @@
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/_background"
+    tools:context="fr.esgi.android.mamoyenne.MainActivity" >
+
+    <TextView
+        android:id="@+id/myenneLabel"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/gestionNotes"
+        android:layout_alignRight="@+id/gestionNotes"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="@string/mainGeneralMark"
+        android:textColor="@android:color/white"
+        android:textSize="12pt" />
+
+    <TextView
+        android:id="@+id/messageAccueil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/myenneLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:singleLine="false"
+        android:text="@string/generalMark"
+        android:textAppearance="@style/LabelTitles" />
+
+    <Button
+        android:id="@+id/gestionNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myenneLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/green_button"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/markManage"
+        android:textColor="@android:color/white" />
+  
+</RelativeLayout>

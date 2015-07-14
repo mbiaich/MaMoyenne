@@ -1,10 +1,12 @@
 package fr.esgi.android.mamoyenne;
 
+
 import fr.esgi.android.mamoyenne.DAO.NoteDAO;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -35,21 +37,45 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+    	MenuInflater inflater = getMenuInflater();
+        getMenuInflater().inflate(R.menu.activity_main_actions, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
+    
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
+        // Take appropriate action for each action item click
+        switch (item.getItemId()) {
+        case R.id.action_about:
+            AboutFound();
             return true;
+        case R.id.action_help:
+            // location found
+            HelpFound();
+            return true;
+        case R.id.action_settings:
+            // refresh
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
+    }
+    
+    /**
+     * Launching new activity
+     * */
+    private void HelpFound() {
+        Intent i = new Intent(MainActivity.this, HelpFound.class);
+        startActivity(i);
+    }
+    
+    /**
+     * Launching new activity
+     * */
+    private void AboutFound() {
+        Intent i = new Intent(MainActivity.this, AboutFound.class);
+        startActivity(i);
     }
     
     public void onClick(View v) {

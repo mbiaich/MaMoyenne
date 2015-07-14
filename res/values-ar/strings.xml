@@ -42,4 +42,9 @@
  	<string name="dialogAskDeleteMark">هل أنت متأكد أنك تريد حذف هذه الملاحظة؟</string>
  	<string name="dialogAskUpdateField">هل أنت متأكد أنك تريد تغيير هذا الأمر؟</string>
  	<string name="dialogAskDeleteField">هل أنت متأكد أنك تريد حذف هذه المواد ؟</string>
+ 	<string name="about">يسمح هذا التطبيق ل إدارة الملاحظات الخاصة بك أثناء العام الدراسي . يمكنك إضافة مواد وتلاحظ مع العناوين و معاملات.</string>
+ 	<string name="help">لطلب المساعدة، الرجاء الاتصال بنا عبر البريد الالكتروني mamoyenne@gmail.com</string>
+ 	<string name="actionHelp">مساعدة </string>
+ 	 	<string name="actionAbout">حول</string>
+ 	
 </resources>
