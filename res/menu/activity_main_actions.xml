@@ -15,5 +15,9 @@
         android:id="@+id/ac_accueil"
         android:showAsAction="ifRoom"
         android:title="@string/start"/>
+     <item
+        android:id="@+id/ac_parametres"
+        android:showAsAction="ifRoom"
+        android:title="@string/settings"/>
 
 </menu>

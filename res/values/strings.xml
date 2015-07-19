@@ -47,4 +47,5 @@
  	<string name="actionHelp">Aide</string>
  	<string name="actionAbout">A propos</string>
  	<string name="start">Accueil</string>
+ 	<string name="settings">Parametres</string>
 </resources>

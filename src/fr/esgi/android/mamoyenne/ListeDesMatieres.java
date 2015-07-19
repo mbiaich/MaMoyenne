@@ -27,6 +27,7 @@ public class ListeDesMatieres extends ListActivity {
 		setContentView(R.layout.activity_liste_matieres);
 	}
 	
+
 	@Override
 	protected void onRestart() {
 		// TODO Auto-generated method stub

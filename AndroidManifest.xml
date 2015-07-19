@@ -30,6 +30,7 @@
         <activity android:name="fr.esgi.android.mamoyenne.DetailsNote"/>
         <activity android:name="fr.esgi.android.mamoyenne.Help"/>
         <activity android:name="fr.esgi.android.mamoyenne.About"/>
+        <activity android:name="fr.esgi.android.mamoyenne.Settings"/>
     </application>
 
 </manifest>

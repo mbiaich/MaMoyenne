@@ -60,10 +60,18 @@ public class MainActivity extends Activity {
         case R.id.action_settings:
             // refresh
             return true;
+        case R.id.ac_parametres:
+    		setSettings();
+        	return true;
         default:
             return super.onOptionsItemSelected(item);
         }
     }
+    private void setSettings()
+    {
+    	this.startActivity(new Intent(this, Settings.class));
+    }
+    
     
     private void RetourAccueil()
     {

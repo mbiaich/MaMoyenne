@@ -55,13 +55,15 @@ public final class R {
         public static final int textview_round=0x7f02000d;
     }
     public static final class id {
-        public static final int ac_accueil=0x7f09001f;
-        public static final int action_about=0x7f09001e;
-        public static final int action_help=0x7f09001d;
-        public static final int action_settings=0x7f090020;
+        public static final int ac_accueil=0x7f090024;
+        public static final int ac_parametres=0x7f090025;
+        public static final int action_about=0x7f090023;
+        public static final int action_help=0x7f090022;
+        public static final int action_settings=0x7f090026;
         public static final int addButton=0x7f090018;
         public static final int ajoutMatiereLabel=0x7f090001;
         public static final int btnFrmCreateMatiere=0x7f09000f;
+        public static final int cancelValidActionBar=0x7f090021;
         public static final int coefInput=0x7f090009;
         public static final int coeffLabel=0x7f09000d;
         public static final int coefficientMatiereLabel=0x7f090004;
@@ -80,6 +82,9 @@ public final class R {
         public static final int nomMatiereLabel=0x7f090002;
         public static final int noteInput=0x7f090008;
         public static final int noteLabel=0x7f090007;
+        public static final int radioButton1=0x7f09001d;
+        public static final int radioButton2=0x7f09001e;
+        public static final int radioButton3=0x7f09001f;
         public static final int register=0x7f090006;
         public static final int txt_row_liste_matiere=0x7f09001b;
         public static final int txt_row_liste_note=0x7f09001c;
@@ -88,6 +93,7 @@ public final class R {
         public static final int valeurCoeffLabel=0x7f090011;
         public static final int valeurNoteLabel=0x7f090010;
         public static final int valeurTypeExam=0x7f090012;
+        public static final int validActionBar=0x7f090020;
     }
     public static final class layout {
         public static final int about=0x7f030000;
@@ -101,6 +107,7 @@ public final class R {
         public static final int help=0x7f030008;
         public static final int list_view_matiere=0x7f030009;
         public static final int list_view_note=0x7f03000a;
+        public static final int setting=0x7f03000b;
     }
     public static final class menu {
         public static final int activity_main_actions=0x7f080000;
@@ -147,6 +154,7 @@ public final class R {
         public static final int modify=0x7f06000d;
         public static final int noteInputLabel=0x7f06001a;
         public static final int register=0x7f060007;
+        public static final int settings=0x7f060030;
         public static final int start=0x7f06002f;
         public static final int subjectDetails=0x7f06000c;
         public static final int subjectList=0x7f060010;
