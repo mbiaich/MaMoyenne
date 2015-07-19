@@ -54,6 +54,9 @@ public class MainActivity extends Activity {
             // location found
             HelpFound();
             return true;
+        case R.id.ac_accueil:
+        	RetourAccueil();
+        	return true;
         case R.id.action_settings:
             // refresh
             return true;
@@ -62,20 +65,22 @@ public class MainActivity extends Activity {
         }
     }
     
+    private void RetourAccueil()
+    {
+    	this.startActivity(new Intent(this, MainActivity.class));
+    }
     /**
      * Launching new activity
      * */
     private void HelpFound() {
-        Intent i = new Intent(MainActivity.this, HelpFound.class);
-        startActivity(i);
+        this.startActivity(new Intent(this, Help.class));
     }
     
     /**
      * Launching new activity
      * */
     private void AboutFound() {
-        Intent i = new Intent(MainActivity.this, AboutFound.class);
-        startActivity(i);
+        this.startActivity( new Intent(this, About.class));
     }
     
     public void onClick(View v) {

@@ -11,5 +11,9 @@
         android:icon="@drawable/ic_action_about"
         android:showAsAction="ifRoom"
         android:title="@string/actionAbout"/>
+     <item
+        android:id="@+id/ac_accueil"
+        android:showAsAction="ifRoom"
+        android:title="@string/start"/>
 
 </menu>

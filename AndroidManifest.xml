@@ -28,6 +28,8 @@
         <activity android:name="fr.esgi.android.mamoyenne.AjoutNote"/>
         <activity android:name="fr.esgi.android.mamoyenne.DetailsMatiere"/>
         <activity android:name="fr.esgi.android.mamoyenne.DetailsNote"/>
+        <activity android:name="fr.esgi.android.mamoyenne.Help"/>
+        <activity android:name="fr.esgi.android.mamoyenne.About"/>
     </application>
 
 </manifest>

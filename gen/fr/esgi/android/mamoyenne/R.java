@@ -55,9 +55,10 @@ public final class R {
         public static final int textview_round=0x7f02000d;
     }
     public static final class id {
+        public static final int ac_accueil=0x7f09001f;
         public static final int action_about=0x7f09001e;
         public static final int action_help=0x7f09001d;
-        public static final int action_settings=0x7f09001f;
+        public static final int action_settings=0x7f090020;
         public static final int addButton=0x7f090018;
         public static final int ajoutMatiereLabel=0x7f090001;
         public static final int btnFrmCreateMatiere=0x7f09000f;
@@ -146,6 +147,7 @@ public final class R {
         public static final int modify=0x7f06000d;
         public static final int noteInputLabel=0x7f06001a;
         public static final int register=0x7f060007;
+        public static final int start=0x7f06002f;
         public static final int subjectDetails=0x7f06000c;
         public static final int subjectList=0x7f060010;
         public static final int subjectNameLabel=0x7f060005;

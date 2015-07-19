@@ -46,5 +46,6 @@
     <string name="about">This application allows the management of your notes during a school year. You can add materials and notes with headings and coefficients .</string>
     <string name="help">To request assistance please send an email to mamoyenne@gmail.com</string>
     <string name="actionAbout">About</string>
+    <string name="start">Home</string>
 
 </resources>

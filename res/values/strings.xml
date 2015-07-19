@@ -46,4 +46,5 @@
  	<string name="help">Pour demander de l\'aide veuillez envoyer un mail à mamoyenne@gmail.com</string>
  	<string name="actionHelp">Aide</string>
  	<string name="actionAbout">A propos</string>
+ 	<string name="start">Accueil</string>
 </resources>

@@ -5,7 +5,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
  
-public class HelpFound  extends Activity {
+public class Help  extends Activity {
  
     @Override
     protected void onCreate(Bundle savedInstanceState) {

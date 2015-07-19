@@ -46,5 +46,6 @@
  	<string name="help">لطلب المساعدة، الرجاء الاتصال بنا عبر البريد الالكتروني mamoyenne@gmail.com</string>
  	<string name="actionHelp">مساعدة </string>
  	 	<string name="actionAbout">حول</string>
+ 	 	<string name="start">الصفحة الرئيسية</string>
  	
 </resources>
