@@ -1,5 +1,6 @@
 package fr.esgi.android.mamoyenne;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,6 +24,8 @@ public class AjoutNote extends Activity {
 		noteDao = new NoteDAO(this);
 		noteDao.open();
 		idMatiere = getIntent().getExtras().getLong("idMatiere");
+		ActionBar actionBar = getActionBar();
+		actionBar.setTitle(R.string.addMark);
 	}
 
 	public void createNote(View v) {

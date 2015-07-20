@@ -2,6 +2,7 @@ package fr.esgi.android.mamoyenne;
 
 import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
 import fr.esgi.android.mamoyenne.tables.Matiere;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,6 +22,8 @@ public class AjoutDuneMatiere extends Activity {
 		setContentView(R.layout.activity_ajout_matiere);
 		matiereDao = new MatiereDAO(this);
 		matiereDao.open();
+		ActionBar actionBar = getActionBar();
+		actionBar.setTitle(R.string.addSubject);
 	}
 
 	public void createMatiere(View v) {

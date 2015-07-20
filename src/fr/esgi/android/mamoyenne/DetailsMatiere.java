@@ -1,5 +1,6 @@
 package fr.esgi.android.mamoyenne;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -24,6 +25,8 @@ public class DetailsMatiere extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_detail_matiere);
+		ActionBar actionBar = getActionBar();
+		actionBar.setTitle(R.string.subjectDetails);
 		matiereDao = new MatiereDAO(this);
 		matiereDao.open();
 		m = (Matiere) getIntent().getExtras().get("matiere");

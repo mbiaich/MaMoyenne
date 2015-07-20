@@ -2,6 +2,7 @@ package fr.esgi.android.mamoyenne;
 
 import java.util.List;
 
+import android.app.ActionBar;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,6 +26,8 @@ public class ListeDesMatieres extends ListActivity {
 		matiereDao.open();
 		refresh();
 		setContentView(R.layout.activity_liste_matieres);
+		ActionBar actionBar = getActionBar();
+		actionBar.setTitle(R.string.subjectList);
 	}
 	
 

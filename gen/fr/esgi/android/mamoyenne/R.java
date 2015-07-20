@@ -82,9 +82,9 @@ public final class R {
         public static final int nomMatiereLabel=0x7f090002;
         public static final int noteInput=0x7f090008;
         public static final int noteLabel=0x7f090007;
-        public static final int radioButton1=0x7f09001d;
-        public static final int radioButton2=0x7f09001e;
-        public static final int radioButton3=0x7f09001f;
+        public static final int radioButtonAR=0x7f09001f;
+        public static final int radioButtonEN=0x7f09001e;
+        public static final int radioButtonFR=0x7f09001d;
         public static final int register=0x7f090006;
         public static final int txt_row_liste_matiere=0x7f09001b;
         public static final int txt_row_liste_note=0x7f09001c;

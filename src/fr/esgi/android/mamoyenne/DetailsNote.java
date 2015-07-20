@@ -2,6 +2,7 @@ package fr.esgi.android.mamoyenne;
 
 import fr.esgi.android.mamoyenne.DAO.NoteDAO;
 import fr.esgi.android.mamoyenne.tables.Note;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -27,6 +28,9 @@ public class DetailsNote extends Activity {
         noteDao = new NoteDAO(this);
         noteDao.open();
         n = (Note) getIntent().getExtras().get("note");
+        
+        ActionBar actionBar = getActionBar();
+		actionBar.setTitle(R.string.markDetails);
         
         EditText editTextNom = (EditText)findViewById(R.id.valeurNoteLabel);
         editTextNom.setText(n.getNote().toString());

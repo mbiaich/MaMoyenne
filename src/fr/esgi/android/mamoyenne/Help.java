@@ -12,10 +12,8 @@ public class Help  extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help);
  
-        // get action bar   
+      
         ActionBar actionBar = getActionBar();
- 
-        // Enabling Up / Back navigation
-        actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setTitle(R.string.help);
     }
 }

@@ -2,6 +2,7 @@ package fr.esgi.android.mamoyenne;
 
 import java.util.List;
 
+import android.app.ActionBar;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,6 +31,9 @@ public class NotesPourUneMatiere extends ListActivity {
 		matiereDao = new MatiereDAO(this);
 		matiereDao.open();
 		idMatiere = getIntent().getExtras().getLong("idMatiere");
+		
+		ActionBar actionBar = getActionBar();
+		actionBar.setTitle(getString(R.string.markFor)+" " + matiereDao.getMatiere(idMatiere).getNom().toString());
 		
 		setContentView(R.layout.activity_notes_pour_matiere);
 		
