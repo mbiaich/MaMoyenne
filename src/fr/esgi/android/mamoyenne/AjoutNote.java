@@ -75,6 +75,13 @@ public class AjoutNote extends Activity {
 	}
 
 	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		getMenuInflater().inflate(R.menu.menu_ecran_standard, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Take appropriate action for each action item click
 		switch (item.getItemId()) {
@@ -98,18 +105,21 @@ public class AjoutNote extends Activity {
 			return super.onOptionsItemSelected(item);
 		}
 	}
-	private void retourAccueil()
-	{
+
+	private void retourAccueil() {
 		this.startActivity(new Intent(this, MainActivity.class));
 	}
+
 	private void setSettings() {
 		this.startActivity(new Intent(this, Settings.class));
 	}
+
 	private void HelpFound() {
 		this.startActivity(new Intent(this, Help.class));
 	}
+
 	private void AboutFound() {
 		this.startActivity(new Intent(this, About.class));
-	}	
-	
+	}
+
 }

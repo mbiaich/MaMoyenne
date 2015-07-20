@@ -131,6 +131,13 @@ public class DetailsMatiere extends Activity {
 	}
 
 	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		getMenuInflater().inflate(R.menu.menu_ecran_standard, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Take appropriate action for each action item click
 		switch (item.getItemId()) {
@@ -170,5 +177,4 @@ public class DetailsMatiere extends Activity {
 	private void AboutFound() {
 		this.startActivity(new Intent(this, About.class));
 	}
-
 }

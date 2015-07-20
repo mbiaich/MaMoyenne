@@ -4,6 +4,7 @@ import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
 import fr.esgi.android.mamoyenne.tables.Matiere;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -61,6 +62,54 @@ public class AjoutDuneMatiere extends Activity {
 	public void onDestroy() {
 		matiereDao.close();
 		super.onDestroy();
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		getMenuInflater().inflate(R.menu.menu_ecran_standard, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Take appropriate action for each action item click
+		switch (item.getItemId()) {
+		case R.id.action_about:
+			AboutFound();
+			return true;
+		case R.id.action_help:
+			// location found
+			HelpFound();
+			return true;
+		case R.id.action_settings:
+			// refresh
+			return true;
+		case R.id.ac_parametres:
+			setSettings();
+			return true;
+		case R.id.ac_accueil:
+			retourAccueil();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+
+	private void retourAccueil() {
+		this.startActivity(new Intent(this, MainActivity.class));
+	}
+
+	private void setSettings() {
+		this.startActivity(new Intent(this, Settings.class));
+	}
+
+	private void HelpFound() {
+		this.startActivity(new Intent(this, Help.class));
+	}
+
+	private void AboutFound() {
+		this.startActivity(new Intent(this, About.class));
 	}
 
 }
