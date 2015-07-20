@@ -8,57 +8,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin" >
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <RadioButton
-            android:id="@+id/radioButtonFR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Francais"
-            android:onClick="setLanguageSelected" />
-
-        <RadioButton
-            android:id="@+id/radioButtonEN"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="English" 
-            android:onClick="setLanguageSelected" />
-
-        <RadioButton
-            android:id="@+id/radioButtonAR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Arabic" 
-            android:onClick="setLanguageSelected" />
-    </RadioGroup>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/validActionBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:background="@drawable/green_button"
-            android:onClick="validerLangue"
-            android:text="Valider" />
-
-        <Button
-            android:id="@+id/cancelValidActionBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/red_button"
-            android:onClick="annulerModificationLangue"
-            android:text="Annuler" />
-    </LinearLayout>
+ <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/languages"
+       android:gravity="center" android:paddingTop="25sp" />
+   
 
 </LinearLayout>

@@ -48,5 +48,11 @@
     <string name="actionAbout">About</string>
     <string name="start">Home</string>
     <string name="settings">Settings</string>
+    <string-array name="languages">
+        <item>Select language</item>
+        <item>English</item>
+        <item>Francais</item>
+        <item>Arabic</item>
+    </string-array>
 
 </resources>

@@ -1,52 +1,60 @@
 <resources>
+
     <string name="app_name">درجتي المتوسطة</string>
     <string name="hello_world">أهلاً وسهلاً!</string>
     <string name="action_settings">الضبط</string>
     <string name="labelGererNotes">اداره درجاتي</string>
- 	<string name="addSubject"> إضافة مادة </string>
- 	<string name="subjectNameLabel">إسم المادة </string>
- 	<string name="coefLabel">المعدل  </string>
- 	<string name="register">تسجيل</string>
- 	<string name="addMark">إضافة درجة </string>
- 	<string name="mark">درجة </string>
- 	<string name="coefNote">معدل الدرجة </string>
- 	<string name="typeExa">نوع الامتحان</string>
- 	<string name="subjectDetails">تفاصيل المادة </string>
- 	<string name="modify">تعديل </string>
- 	<string name="delete">حذف </string>
- 	<string name="markDetails">تفاصيل الدرجة </string>
- 	<string name="subjectList">قائمة المواد </string>
- 	<string name="add">+</string>
- 	<string name="generalMark">درجتك العامة المتوسطة هي :</string>
- 	<string name="markManage">اداره درجاتي</string>
- 	<string name="markFor">الدرجات إلى  :</string>
- 	<string name="average">المتوسط  :</string>
- 	<string name="mainGeneralMark">/ 20</string>
- 	<string name="deletedMark">تم حذف الدرجة !</string>
- 	<string name="typeExaVal">قيمة الامتحان </string>
- 	<string name="markValCoef">قيمه المعدل للدرجة </string>
- 	<string name="noteInputLabel">إدخل درجة</string>
- 	<string name="errorCoeffToast">خطأ ! من فضلك ادخل قاسما مشتركا بين 1 و 10</string>
- 	<string name="errorMarkToast">خطأ ! من فضلك ادخل على درجة بين 0 و 20</string>
- 	<string name="errorEmptyFieldsToast">خطأ ! يرجى تعبئة جميع الحقول .</string>
- 	<string name="createMarkToast">ملاحظة خلقت</string>
- 	<string name="updateMarkToast">ملاحظة تغير</string>
- 	<string name="deleteMarkToast">ملاحظة حذفها</string>
- 	<string name="createFieldToast">المواد خلقت</string>
- 	<string name="updateFieldToast">المواد المعدلة</string>
- 	<string name="deleteFieldToast">المواد التي تم إزالتها</string> 	
- 	<string name="dialogWarning">احترس</string>
- 	<string name="dialogYes">نعم</string>
- 	<string name="dialogNo">لا</string>
- 	<string name="dialogAskUpdateMark">هل أنت متأكد أنك تريد تغيير هذه الملاحظة؟</string>
- 	<string name="dialogAskDeleteMark">هل أنت متأكد أنك تريد حذف هذه الملاحظة؟</string>
- 	<string name="dialogAskUpdateField">هل أنت متأكد أنك تريد تغيير هذا الأمر؟</string>
- 	<string name="dialogAskDeleteField">هل أنت متأكد أنك تريد حذف هذه المواد ؟</string>
- 	<string name="about">يسمح هذا التطبيق ل إدارة الملاحظات الخاصة بك أثناء العام الدراسي . يمكنك إضافة مواد وتلاحظ مع العناوين و معاملات.</string>
- 	<string name="help">لطلب المساعدة، الرجاء الاتصال بنا عبر البريد الالكتروني mamoyenne@gmail.com</string>
- 	<string name="actionHelp">مساعدة </string>
- 	 	<string name="actionAbout">حول</string>
- 	 	<string name="start">الصفحة الرئيسية</string>
- 	 	<string name="settings">الإعدادات</string>
- 	
+    <string name="addSubject"> إضافة مادة </string>
+    <string name="subjectNameLabel">إسم المادة </string>
+    <string name="coefLabel">المعدل  </string>
+    <string name="register">تسجيل</string>
+    <string name="addMark">إضافة درجة </string>
+    <string name="mark">درجة </string>
+    <string name="coefNote">معدل الدرجة </string>
+    <string name="typeExa">نوع الامتحان</string>
+    <string name="subjectDetails">تفاصيل المادة </string>
+    <string name="modify">تعديل </string>
+    <string name="delete">حذف </string>
+    <string name="markDetails">تفاصيل الدرجة </string>
+    <string name="subjectList">قائمة المواد </string>
+    <string name="add">+</string>
+    <string name="generalMark">درجتك العامة المتوسطة هي :</string>
+    <string name="markManage">اداره درجاتي</string>
+    <string name="markFor">الدرجات إلى  :</string>
+    <string name="average">المتوسط  :</string>
+    <string name="mainGeneralMark">/ 20</string>
+    <string name="deletedMark">تم حذف الدرجة !</string>
+    <string name="typeExaVal">قيمة الامتحان </string>
+    <string name="markValCoef">قيمه المعدل للدرجة </string>
+    <string name="noteInputLabel">إدخل درجة</string>
+    <string name="errorCoeffToast">خطأ ! من فضلك ادخل قاسما مشتركا بين 1 و 10</string>
+    <string name="errorMarkToast">خطأ ! من فضلك ادخل على درجة بين 0 و 20</string>
+    <string name="errorEmptyFieldsToast">خطأ ! يرجى تعبئة جميع الحقول .</string>
+    <string name="createMarkToast">ملاحظة خلقت</string>
+    <string name="updateMarkToast">ملاحظة تغير</string>
+    <string name="deleteMarkToast">ملاحظة حذفها</string>
+    <string name="createFieldToast">المواد خلقت</string>
+    <string name="updateFieldToast">المواد المعدلة</string>
+    <string name="deleteFieldToast">المواد التي تم إزالتها</string>
+    <string name="dialogWarning">احترس</string>
+    <string name="dialogYes">نعم</string>
+    <string name="dialogNo">لا</string>
+    <string name="dialogAskUpdateMark">هل أنت متأكد أنك تريد تغيير هذه الملاحظة؟</string>
+    <string name="dialogAskDeleteMark">هل أنت متأكد أنك تريد حذف هذه الملاحظة؟</string>
+    <string name="dialogAskUpdateField">هل أنت متأكد أنك تريد تغيير هذا الأمر؟</string>
+    <string name="dialogAskDeleteField">هل أنت متأكد أنك تريد حذف هذه المواد ؟</string>
+    <string name="about">يسمح هذا التطبيق ل إدارة الملاحظات الخاصة بك أثناء العام الدراسي . يمكنك إضافة مواد وتلاحظ مع العناوين و معاملات.</string>
+    <string name="help">لطلب المساعدة، الرجاء الاتصال بنا عبر البريد الالكتروني mamoyenne@gmail.com</string>
+    <string name="actionHelp">مساعدة </string>
+    <string name="actionAbout">حول</string>
+    <string name="start">الصفحة الرئيسية</string>
+    <string name="settings">الإعدادات</string>
+
+    <string-array name="languages">
+        <item>Select language</item>
+        <item>English</item>
+        <item>Francais</item>
+        <item>Arabic</item>
+    </string-array>
+
 </resources>

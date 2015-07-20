@@ -8,6 +8,9 @@
 package fr.esgi.android.mamoyenne;
 
 public final class R {
+    public static final class array {
+        public static final int languages=0x7f070000;
+    }
     public static final class attr {
     }
     public static final class color {
@@ -55,52 +58,48 @@ public final class R {
         public static final int textview_round=0x7f02000d;
     }
     public static final class id {
-        public static final int ac_accueil=0x7f09002d;
-        public static final int ac_parametres=0x7f090029;
-        public static final int action_about=0x7f090028;
-        public static final int action_help=0x7f090027;
-        public static final int action_settings=0x7f09002a;
-        public static final int addButton=0x7f09001b;
-        public static final int ajoutMatiereLabel=0x7f090001;
-        public static final int btnFrmCreateMatiere=0x7f090012;
-        public static final int button1=0x7f09001a;
-        public static final int cancelValidActionBar=0x7f090026;
-        public static final int coefInput=0x7f090009;
-        public static final int coeffLabel=0x7f09000d;
-        public static final int coefficientMatiereLabel=0x7f090004;
-        public static final int coefficietMatiereInput=0x7f090005;
-        public static final int delete=0x7f09002c;
-        public static final int detailMatiereLabel=0x7f09000c;
-        public static final int edit=0x7f09002b;
-        public static final int gestionNotes=0x7f090018;
-        public static final int idnoteLabel=0x7f09001f;
-        public static final int listeMatieresLabel=0x7f090013;
-        public static final int messageAbout=0x7f090000;
-        public static final int messageAccueil=0x7f090019;
-        public static final int modify=0x7f09000e;
-        public static final int moyenneMatiereLabel=0x7f090020;
-        public static final int myenneLabel=0x7f090017;
-        public static final int nomMatiereInput=0x7f090003;
-        public static final int nomMatiereLabel=0x7f090002;
-        public static final int noteInput=0x7f090008;
-        public static final int noteLabel=0x7f090007;
-        public static final int radioButtonAR=0x7f090024;
-        public static final int radioButtonEN=0x7f090023;
-        public static final int radioButtonFR=0x7f090022;
-        public static final int register=0x7f090006;
-        public static final int txt_row_liste_matiere_coeff=0x7f090015;
-        public static final int txt_row_liste_matiere_moyenne=0x7f090016;
-        public static final int txt_row_liste_matiere_nom_matiere=0x7f090014;
-        public static final int txt_row_liste_note=0x7f09001c;
-        public static final int txt_row_liste_note__type=0x7f09001d;
-        public static final int txt_row_liste_note_coeff=0x7f09001e;
-        public static final int txt_row_liste_note_type=0x7f090021;
-        public static final int typeExamInput=0x7f09000b;
-        public static final int typeExamLabel=0x7f09000a;
-        public static final int valeurCoeffLabel=0x7f090010;
-        public static final int valeurNoteLabel=0x7f09000f;
-        public static final int valeurTypeExam=0x7f090011;
-        public static final int validActionBar=0x7f090025;
+        public static final int ac_accueil=0x7f0a0029;
+        public static final int ac_parametres=0x7f0a0025;
+        public static final int action_about=0x7f0a0024;
+        public static final int action_help=0x7f0a0023;
+        public static final int action_settings=0x7f0a0026;
+        public static final int addButton=0x7f0a001b;
+        public static final int ajoutMatiereLabel=0x7f0a0001;
+        public static final int btnFrmCreateMatiere=0x7f0a0012;
+        public static final int button1=0x7f0a001a;
+        public static final int coefInput=0x7f0a0009;
+        public static final int coeffLabel=0x7f0a000d;
+        public static final int coefficientMatiereLabel=0x7f0a0004;
+        public static final int coefficietMatiereInput=0x7f0a0005;
+        public static final int delete=0x7f0a0028;
+        public static final int detailMatiereLabel=0x7f0a000c;
+        public static final int edit=0x7f0a0027;
+        public static final int gestionNotes=0x7f0a0018;
+        public static final int idnoteLabel=0x7f0a001f;
+        public static final int listeMatieresLabel=0x7f0a0013;
+        public static final int messageAbout=0x7f0a0000;
+        public static final int messageAccueil=0x7f0a0019;
+        public static final int modify=0x7f0a000e;
+        public static final int moyenneMatiereLabel=0x7f0a0020;
+        public static final int myenneLabel=0x7f0a0017;
+        public static final int nomMatiereInput=0x7f0a0003;
+        public static final int nomMatiereLabel=0x7f0a0002;
+        public static final int noteInput=0x7f0a0008;
+        public static final int noteLabel=0x7f0a0007;
+        public static final int register=0x7f0a0006;
+        public static final int spinner1=0x7f0a0022;
+        public static final int txt_row_liste_matiere_coeff=0x7f0a0015;
+        public static final int txt_row_liste_matiere_moyenne=0x7f0a0016;
+        public static final int txt_row_liste_matiere_nom_matiere=0x7f0a0014;
+        public static final int txt_row_liste_note=0x7f0a001c;
+        public static final int txt_row_liste_note__type=0x7f0a001d;
+        public static final int txt_row_liste_note_coeff=0x7f0a001e;
+        public static final int txt_row_liste_note_type=0x7f0a0021;
+        public static final int typeExamInput=0x7f0a000b;
+        public static final int typeExamLabel=0x7f0a000a;
+        public static final int valeurCoeffLabel=0x7f0a0010;
+        public static final int valeurNoteLabel=0x7f0a000f;
+        public static final int valeurTypeExam=0x7f0a0011;
     }
     public static final class layout {
         public static final int about=0x7f030000;
@@ -117,10 +116,10 @@ public final class R {
         public static final int setting=0x7f03000b;
     }
     public static final class menu {
-        public static final int activity_main_actions=0x7f080000;
-        public static final int main=0x7f080001;
-        public static final int menu_context=0x7f080002;
-        public static final int menu_ecran_standard=0x7f080003;
+        public static final int activity_main_actions=0x7f090000;
+        public static final int main=0x7f090001;
+        public static final int menu_context=0x7f090002;
+        public static final int menu_ecran_standard=0x7f090003;
     }
     public static final class string {
         public static final int about=0x7f06002b;
@@ -196,17 +195,17 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
-        public static final int ButtnTxt=0x7f070002;
-        public static final int ButtonText=0x7f070003;
-        public static final int CustomFontStyle=0x7f070004;
-        public static final int LabelTitles=0x7f070007;
-        public static final int MyTheme=0x7f070006;
-        public static final int sectionHeader=0x7f070005;
-        public static final int subLabelTitles=0x7f070008;
+        public static final int AppTheme=0x7f080001;
+        public static final int ButtnTxt=0x7f080002;
+        public static final int ButtonText=0x7f080003;
+        public static final int CustomFontStyle=0x7f080004;
+        public static final int LabelTitles=0x7f080007;
+        public static final int MyTheme=0x7f080006;
+        public static final int sectionHeader=0x7f080005;
+        public static final int subLabelTitles=0x7f080008;
     }
 }
