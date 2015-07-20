@@ -14,6 +14,6 @@ public class Help  extends Activity {
  
       
         ActionBar actionBar = getActionBar();
-		actionBar.setTitle(R.string.help);
+		actionBar.setTitle(R.string.actionHelp);
     }
 }

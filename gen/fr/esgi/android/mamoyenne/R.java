@@ -55,11 +55,11 @@ public final class R {
         public static final int textview_round=0x7f02000d;
     }
     public static final class id {
-        public static final int ac_accueil=0x7f090029;
-        public static final int ac_parametres=0x7f09002a;
+        public static final int ac_accueil=0x7f09002d;
+        public static final int ac_parametres=0x7f090029;
         public static final int action_about=0x7f090028;
         public static final int action_help=0x7f090027;
-        public static final int action_settings=0x7f09002b;
+        public static final int action_settings=0x7f09002a;
         public static final int addButton=0x7f09001b;
         public static final int ajoutMatiereLabel=0x7f090001;
         public static final int btnFrmCreateMatiere=0x7f090012;
@@ -69,9 +69,9 @@ public final class R {
         public static final int coeffLabel=0x7f09000d;
         public static final int coefficientMatiereLabel=0x7f090004;
         public static final int coefficietMatiereInput=0x7f090005;
-        public static final int delete=0x7f09002d;
+        public static final int delete=0x7f09002c;
         public static final int detailMatiereLabel=0x7f09000c;
-        public static final int edit=0x7f09002c;
+        public static final int edit=0x7f09002b;
         public static final int gestionNotes=0x7f090018;
         public static final int idnoteLabel=0x7f09001f;
         public static final int listeMatieresLabel=0x7f090013;
@@ -120,6 +120,7 @@ public final class R {
         public static final int activity_main_actions=0x7f080000;
         public static final int main=0x7f080001;
         public static final int menu_context=0x7f080002;
+        public static final int menu_ecran_standard=0x7f080003;
     }
     public static final class string {
         public static final int about=0x7f06002b;

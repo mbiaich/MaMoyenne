@@ -66,27 +66,50 @@ public class NotesPourUneMatiere extends ListActivity {
 		super.onRestart();
 		
 	}
-
 	@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.activity_main_actions, menu);
- 
-        return super.onCreateOptionsMenu(menu);
-    }
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		getMenuInflater().inflate(R.menu.menu_ecran_standard, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		// Take appropriate action for each action item click
+		switch (item.getItemId()) {
+		case R.id.action_about:
+			AboutFound();
 			return true;
+		case R.id.action_help:
+			// location found
+			HelpFound();
+			return true;
+		case R.id.action_settings:
+			// refresh
+			return true;
+		case R.id.ac_parametres:
+			setSettings();
+			return true;
+		case R.id.ac_accueil:
+			retourAccueil();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
 		}
-		return super.onOptionsItemSelected(item);
 	}
-
+	private void retourAccueil()
+	{
+		this.startActivity(new Intent(this, MainActivity.class));
+	}
+	private void setSettings() {
+		this.startActivity(new Intent(this, Settings.class));
+	}
+	private void HelpFound() {
+		this.startActivity(new Intent(this, Help.class));
+	}
+	private void AboutFound() {
+		this.startActivity(new Intent(this, About.class));
+	}	
 	public void frmAjoutNote(View v) {
 		Intent i = new Intent(this, AjoutNote.class);
 		i.putExtra("idMatiere", idMatiere);

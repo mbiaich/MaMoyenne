@@ -90,17 +90,9 @@ public class MainActivity extends Activity {
 	private void setSettings() {
 		this.startActivity(new Intent(this, Settings.class));
 	}
-
-	/**
-	 * Launching new activity
-	 * */
 	private void HelpFound() {
 		this.startActivity(new Intent(this, Help.class));
 	}
-
-	/**
-	 * Launching new activity
-	 * */
 	private void AboutFound() {
 		this.startActivity(new Intent(this, About.class));
 	}

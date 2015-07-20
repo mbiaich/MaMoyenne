@@ -16,6 +16,6 @@ public class About  extends Activity {
         ActionBar actionBar = getActionBar();
  
         // Enabling Up / Back navigation
-        actionBar.setTitle(R.string.about);
+        actionBar.setTitle(R.string.actionAbout);
     }
 }

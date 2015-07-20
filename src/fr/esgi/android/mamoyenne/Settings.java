@@ -21,9 +21,8 @@ public class Settings extends Activity {
 
 		// get action bar
 		ActionBar actionBar = getActionBar();
-
 		// Enabling Up / Back navigation
-		actionBar.setTitle(R.string.settings);
+		actionBar.setTitle(R.string.action_settings);
 	}
 
 	public void annulerModificationLangue(View v) {
