@@ -47,6 +47,14 @@ public class NoteListAdapter extends BaseAdapter {
 		TextView txtRowListNote = (TextView) convertView.findViewById(R.id.txt_row_liste_note);
 		txtRowListNote.setTextColor(Color.WHITE);
 		txtRowListNote.setText(note.getNote().toString());
+		
+		TextView txtRowListNoteType = (TextView) convertView.findViewById(R.id.txt_row_liste_note_type);
+		txtRowListNoteType.setTextColor(Color.WHITE);
+		txtRowListNoteType.setText(note.getTypeExamen());
+		
+		TextView txtRowListNoteCoeff = (TextView) convertView.findViewById(R.id.txt_row_liste_note_coeff);
+		txtRowListNoteCoeff.setTextColor(Color.WHITE);
+		txtRowListNoteCoeff.setText(String.valueOf(note.getCoefficient()));
 		return convertView;
 	}
 }
