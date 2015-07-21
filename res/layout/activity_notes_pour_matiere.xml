@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/_background" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/_background"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:onClick="frmAjoutNote"
+        android:text="@string/add"
+        android:textColor="@color/green"
+        android:textSize="14pt"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
 
-            <Button
-                android:id="@+id/addButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:background="@android:color/transparent"
-                android:onClick="frmAjoutNote"
-                android:text="@string/add"
-                android:textColor="@color/green"
-                android:textSize="14pt"
-                android:textStyle="bold" />
-
-        <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="horizontal" 
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp">
-        
         <EditText
             android:id="@+id/typeNoteAChercher"
             android:layout_width="wrap_content"
@@ -43,78 +39,74 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:textSize="7pt"
             android:onClick="refreshListWithSearch"
-            android:text="@string/searchButton" />
-        
-        </LinearLayout>
-
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-    
-	<TextView
-	    android:id="@+id/txt_row_liste_note"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_weight="2"
-	    android:minWidth="@dimen/activity_horizontal_margin"
-	    android:text="@string/libelleCol1Mark"
-	    android:textColor="@color/darkred"
-	    android:textSize="18sp"
-	    android:width="33dp" />
-
-    <TextView
-        android:id="@+id/txt_row_liste_note__type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="6"
-        android:minWidth="@dimen/activity_horizontal_margin"
-        android:text="@string/libelleCol2Mark"
-        android:textColor="@color/darkred"
-        android:textSize="18sp"
-        android:width="10dp" />
-
-    <TextView
-        android:id="@+id/txt_row_liste_note_coeff"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:minWidth="@dimen/activity_horizontal_margin"
-        android:text="@string/libelleCol3Mark"
-        android:textColor="@color/darkred"
-        android:textSize="18sp"
-        android:width="10dp" />
-
-	</LinearLayout>
-        
-        <ListView
-            android:id="@android:id/list"
-            android:layout_width="match_parent"
-            android:layout_weight="100"
-            android:layout_height="222dp" 
-            android:minHeight="?android:attr/listPreferredItemHeight"
-            android:textColor="@android:color/white" >
-        </ListView>
-
-        <TextView
-            android:id="@+id/idnoteLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/average"
-            android:textColor="@android:color/white" />
-
-        <TextView
-            android:id="@+id/moyenneMatiereLabel"
-            android:layout_width="128dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_weight="0.19"
-            android:gravity="center"
-            android:text="@string/mainGeneralMark"
-            android:textColor="@android:color/white"
-            android:textSize="12pt" />
+            android:text="@string/searchButton"
+            android:textSize="7pt" />
     </LinearLayout>
 
-</ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/txt_row_liste_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:minWidth="@dimen/activity_horizontal_margin"
+            android:text="@string/libelleCol1Mark"
+            android:textColor="@color/darkred"
+            android:textSize="18sp"
+            android:width="33dp" />
+
+        <TextView
+            android:id="@+id/txt_row_liste_note__type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:minWidth="@dimen/activity_horizontal_margin"
+            android:text="@string/libelleCol2Mark"
+            android:textColor="@color/darkred"
+            android:textSize="18sp"
+            android:width="10dp" />
+
+        <TextView
+            android:id="@+id/txt_row_liste_note_coeff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:minWidth="@dimen/activity_horizontal_margin"
+            android:text="@string/libelleCol3Mark"
+            android:textColor="@color/darkred"
+            android:textSize="18sp"
+            android:width="10dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        android:layout_weight="100"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:textColor="@android:color/white" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/idnoteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/average"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/moyenneMatiereLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/mainGeneralMark"
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+
+</LinearLayout>
