@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/_background" >
 
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical" >
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/_background" >
 
         <Button
             android:id="@+id/btnFrmCreateMatiere"
@@ -24,11 +21,11 @@
             android:textStyle="bold" />
         
         <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="horizontal" 
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp">
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" >
         
         <EditText
             android:id="@+id/matiereAChercher"
@@ -50,8 +47,8 @@
         </LinearLayout>
 
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
     <TextView
         android:id="@+id/txt_row_liste_matiere_nom_matiere"
@@ -91,14 +88,12 @@
         <ListView
             android:id="@android:id/list"
             android:layout_width="match_parent"
-            android:layout_weight="100"
-            android:layout_height="222dp" 
-            android:textColor="@android:color/white" 
+            android:layout_height="wrap_content"
             android:minHeight="?android:attr/listPreferredItemHeight"
-            >
+            android:textColor="@android:color/white" >
+
         </ListView>
 
         
     </LinearLayout>
 
-</ScrollView>

@@ -52,6 +52,7 @@ public class ListeDesMatieres extends ListActivity {
 	protected void onRestart() {
 		// TODO Auto-generated method stub
 		super.onRestart();
+		matieres = matiereDao.getMatieres();
 		refresh();
 	}
 
