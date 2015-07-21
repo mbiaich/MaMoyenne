@@ -17,6 +17,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView.AdapterContextMenuInfo;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
@@ -38,6 +40,7 @@ public class ListeDesMatieres extends ListActivity {
 		registerForContextMenu(l);
 		ActionBar actionBar = getActionBar();
 		actionBar.setTitle(R.string.subjectList);
+
 	}
 
 	@Override
@@ -59,6 +62,27 @@ public class ListeDesMatieres extends ListActivity {
 			setListAdapter(adapter);
 		}
 
+	}
+	
+	public void refreshListWithSearch(View v) {
+		
+		EditText matiereToSearch = (EditText) findViewById(R.id.matiereAChercher);		
+		ListView listView = (ListView) findViewById(android.R.id.list);
+				
+		String valueMatiereSearch = String.valueOf(matiereToSearch.getText().toString());
+		
+		List<Matiere> matieres = matiereDao.getMatieresSearch(valueMatiereSearch);
+		if (!matieres.isEmpty()) {
+			MatiereListAdapter adapter = new MatiereListAdapter(this, matieres);
+			setListAdapter(adapter);
+		}
+		else
+		{
+			Toast.makeText(getApplicationContext(),
+					getString(R.string.searchNoResultSubject), Toast.LENGTH_LONG)
+					.show();
+		}
+		
 	}
 
 	@Override

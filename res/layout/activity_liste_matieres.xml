@@ -22,20 +22,34 @@
             android:textColor="@color/green"
             android:textSize="14pt"
             android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/listeMatieresLabel"
-            android:layout_width="match_parent"
+        
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+        
+        <EditText
+            android:id="@+id/matiereAChercher"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginBottom="50dp"
-            android:layout_weight="20"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="@string/subjectList"
-            android:textAppearance="@style/LabelTitles" />
+            android:layout_weight="7"            
+            android:ems="10" >
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="7pt"
+            android:onClick="refreshListWithSearch"
+            android:text="@string/searchButton" />
+        
+        </LinearLayout>
+
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
@@ -51,7 +65,6 @@
         android:width="33dp" />
 
     <TextView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/txt_row_liste_matiere_coeff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,7 +76,6 @@
         android:width="10dp" />
 
     <TextView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/txt_row_liste_matiere_moyenne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

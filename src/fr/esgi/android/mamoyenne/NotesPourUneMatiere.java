@@ -16,12 +16,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ContextMenu.ContextMenuInfo;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import fr.esgi.android.mamoyenne.DAO.MatiereDAO;
 import fr.esgi.android.mamoyenne.DAO.NoteDAO;
+import fr.esgi.android.mamoyenne.adapters.MatiereListAdapter;
 import fr.esgi.android.mamoyenne.adapters.NoteListAdapter;
 import fr.esgi.android.mamoyenne.tables.Matiere;
 import fr.esgi.android.mamoyenne.tables.Note;
@@ -48,11 +50,6 @@ public class NotesPourUneMatiere extends ListActivity {
 		setContentView(R.layout.activity_notes_pour_matiere);
 		ListView l = (ListView) findViewById(android.R.id.list);
 		registerForContextMenu(l);
-
-		// Affichage de la matière
-		TextView newTextMatiere = (TextView) findViewById(R.id.ajoutMatiereLabel);
-		newTextMatiere.setText(getString(R.string.markFor) + " "
-				+ matiereDao.getMatiere(idMatiere).getNom().toString());
 
 		// Affichage de la moyenne
 		TextView newTextMoyenne = (TextView) findViewById(R.id.moyenneMatiereLabel);
@@ -132,13 +129,30 @@ public class NotesPourUneMatiere extends ListActivity {
 			setListAdapter(adapter);
 		}
 
-		TextView newTextMatiere = (TextView) findViewById(R.id.ajoutMatiereLabel);
-		newTextMatiere.setText(getString(R.string.markFor) + " "
-				+ matiereDao.getMatiere(idMatiere).getNom().toString());
-
 		TextView newTextMoyenne = (TextView) findViewById(R.id.moyenneMatiereLabel);
 		newTextMoyenne.setText(noteDao.getMoyenneByMatiere(idMatiere) + " "
 				+ getString(R.string.mainGeneralMark));
+	}
+	
+	public void refreshListWithSearch(View v) {
+		
+		EditText typeNoteToSearch = (EditText) findViewById(R.id.typeNoteAChercher);		
+		ListView listView = (ListView) findViewById(android.R.id.list);
+				
+		String valueTypeNoteSearch = String.valueOf(typeNoteToSearch.getText().toString());
+		
+		List<Note> Notes = noteDao.getNotesSearch(valueTypeNoteSearch, idMatiere);
+		if (!Notes.isEmpty()) {
+			NoteListAdapter adapter = new NoteListAdapter(this, Notes);
+			setListAdapter(adapter);
+		}
+		else
+		{
+			Toast.makeText(getApplicationContext(),
+					getString(R.string.searchNoResultMark), Toast.LENGTH_LONG)
+					.show();
+		}
+		
 	}
 
 	/*

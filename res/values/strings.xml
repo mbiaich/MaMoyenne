@@ -55,4 +55,7 @@
         <item>Francais</item>
         <item>Arabic</item>
     </string-array>
+    <string name="searchButton">Rechercher</string>
+    <string name="searchNoResultSubject">Matière non trouvée</string>
+    <string name="searchNoResultMark">Note(s) non trouvée(s)</string>
 </resources>

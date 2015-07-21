@@ -99,6 +99,23 @@ public class MatiereDAO extends DAOBase {
 		return matieres;
 	}
 	
+	public List<Matiere> getMatieresSearch(String nomMatiere) {
+		System.out.println(nomMatiere);
+		List<Matiere> matieres = new ArrayList<Matiere>();
+		Cursor cursor = mDb.rawQuery("SELECT idMatiere, nom, coefficient "
+				+ " from " + TABLE_NAME + " where nom = '" + nomMatiere + "'", null);
+		if (cursor.moveToFirst()) {
+			while (!cursor.isAfterLast()) {
+				Matiere m = cursorToMatiere(cursor);
+				matieres.add(m);
+				cursor.moveToNext();
+			}
+		}
+		cursor.close();
+		System.out.println(matieres.size());
+		return matieres;
+	}
+	
 	private Matiere cursorToMatiere(Cursor cursor) {
 		Matiere m = new Matiere();
 		m.setIdMatiere(Integer.parseInt(cursor.getString(0)));

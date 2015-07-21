@@ -128,6 +128,22 @@ public class NoteDAO extends DAOBase {
 		}
 		return notes;
 	}
+	
+	public List<Note> getNotesSearch(String typeNote, long idMatiere) {
+		List<Note> notes = new ArrayList<Note>();
+		Cursor cursor = mDb.rawQuery(
+				"SELECT idNote, note, coefficient, typeExamen, idMatiere FROM "
+						+ TABLE_NAME + " WHERE typeExamen = '" + typeNote + "' AND idMatiere = ?",
+						new String[] { Long.toString(idMatiere) });
+		if (cursor.moveToFirst()) {
+			while (!cursor.isAfterLast()) {
+				Note n = cursorToNote(cursor);
+				notes.add(n);
+				cursor.moveToNext();
+			}
+		}
+		return notes;
+	}
 
 	private Note cursorToNote(Cursor cursor) {
 		Note n = new Note();

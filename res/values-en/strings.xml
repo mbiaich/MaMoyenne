@@ -9,7 +9,7 @@
     <string name="coefLabel">Coefficient of Field</string>
     <string name="register">Register</string>
     <string name="addMark">ADD MARK</string>
-    <string name="mark">Marl</string>
+    <string name="mark">Mark</string>
     <string name="coefNote">Coefficient of mark</string>
     <string name="typeExa">Type of Exam</string>
     <string name="subjectDetails">Field Details</string>
@@ -54,5 +54,9 @@
         <item>Francais</item>
         <item>Arabic</item>
     </string-array>
+    <string name="searchButton">Search</string>
+    <string name="searchNoResultSubject">Field Not Found</string>
+    <string name="searchNoResultMark">Marks Not Found</string>
+    
 
 </resources>
