@@ -2,6 +2,7 @@ package fr.esgi.android.mamoyenne;
 
 import java.util.List;
 
+import android.R.bool;
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -28,12 +29,16 @@ import fr.esgi.android.mamoyenne.tables.Matiere;
 public class ListeDesMatieres extends ListActivity {
 
 	private MatiereDAO matiereDao;
+	private List<Matiere> matieres;
+	private boolean alphabetSortAsc = true;
+	private boolean moyenneSortAsc = true;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		matiereDao = new MatiereDAO(this);
 		matiereDao.open();
+		matieres = matiereDao.getMatieres();
 		refresh();
 		setContentView(R.layout.activity_liste_matieres);
 		ListView l = (ListView) findViewById(android.R.id.list);
@@ -55,8 +60,7 @@ public class ListeDesMatieres extends ListActivity {
 	}
 
 	public void refresh() {
-		ListView listView = (ListView) findViewById(android.R.id.list);
-		List<Matiere> matieres = matiereDao.getMatieres();
+		//matieres = matiereDao.getMatieres();
 		if (!matieres.isEmpty()) {
 			MatiereListAdapter adapter = new MatiereListAdapter(this, matieres);
 			setListAdapter(adapter);
@@ -66,12 +70,11 @@ public class ListeDesMatieres extends ListActivity {
 	
 	public void refreshListWithSearch(View v) {
 		
-		EditText matiereToSearch = (EditText) findViewById(R.id.matiereAChercher);		
-		ListView listView = (ListView) findViewById(android.R.id.list);
+		EditText matiereToSearch = (EditText) findViewById(R.id.matiereAChercher);	
 				
 		String valueMatiereSearch = String.valueOf(matiereToSearch.getText().toString());
 		
-		List<Matiere> matieres = matiereDao.getMatieresSearch(valueMatiereSearch);
+		matieres = matiereDao.getMatieresSearch(valueMatiereSearch);
 		if (!matieres.isEmpty()) {
 			MatiereListAdapter adapter = new MatiereListAdapter(this, matieres);
 			setListAdapter(adapter);
@@ -147,6 +150,8 @@ public class ListeDesMatieres extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
+		menu.add(Menu.NONE, 1, Menu.NONE, "Trier par ordre alphabétique");
+		menu.add(Menu.NONE, 2, Menu.NONE, "Trier par moyenne");
 		getMenuInflater().inflate(R.menu.menu_ecran_standard, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
@@ -170,6 +175,16 @@ public class ListeDesMatieres extends ListActivity {
 			return true;
 		case R.id.ac_accueil:
 			retourAccueil();
+			return true;
+		case 1: 
+			matieres = matiereDao.sortByAlphabet(alphabetSortAsc);
+			alphabetSortAsc = (!alphabetSortAsc);
+			refresh();
+			return true;
+		case 2:
+			matieres = matiereDao.sortByMoyenne(moyenneSortAsc);
+			moyenneSortAsc = (!moyenneSortAsc);
+			refresh();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
