@@ -103,7 +103,7 @@ public class MatiereDAO extends DAOBase {
 		System.out.println(nomMatiere);
 		List<Matiere> matieres = new ArrayList<Matiere>();
 		Cursor cursor = mDb.rawQuery("SELECT idMatiere, nom, coefficient "
-				+ " from " + TABLE_NAME + " where nom = '" + nomMatiere + "'", null);
+				+ " from " + TABLE_NAME + " where nom like '%" + nomMatiere + "%'", null);
 		if (cursor.moveToFirst()) {
 			while (!cursor.isAfterLast()) {
 				Matiere m = cursorToMatiere(cursor);

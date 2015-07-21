@@ -133,7 +133,7 @@ public class NoteDAO extends DAOBase {
 		List<Note> notes = new ArrayList<Note>();
 		Cursor cursor = mDb.rawQuery(
 				"SELECT idNote, note, coefficient, typeExamen, idMatiere FROM "
-						+ TABLE_NAME + " WHERE typeExamen = '" + typeNote + "' AND idMatiere = ?",
+						+ TABLE_NAME + " WHERE typeExamen like '%" + typeNote + "%' AND idMatiere = ?",
 						new String[] { Long.toString(idMatiere) });
 		if (cursor.moveToFirst()) {
 			while (!cursor.isAfterLast()) {
