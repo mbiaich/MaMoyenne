@@ -57,5 +57,11 @@
     </string-array>
     <string name="searchButton">Rechercher</string>
     <string name="searchNoResultSubject">Matière non trouvée</string>
-    <string name="searchNoResultMark">Note(s) non trouvée(s)</string>
+    <string name="searchNoResultMark">Note(s) non trouvée(s)</string>    
+    <string name="libelleCol1Subject">Nom matière</string>
+    <string name="libelleCol2Subject">Coefficient</string>
+    <string name="libelleCol3Subject">Moyenne</string>
+    <string name="libelleCol1Mark">Note</string>
+    <string name="libelleCol2Mark">Type d\'examen</string>
+    <string name="libelleCol3Mark">Coefficient</string>
 </resources>

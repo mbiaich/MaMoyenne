@@ -59,7 +59,7 @@
 	    android:layout_height="wrap_content"
 	    android:layout_weight="2"
 	    android:minWidth="@dimen/activity_horizontal_margin"
-	    android:text="Note"
+	    android:text="@string/libelleCol1Subject"
 	    android:textColor="@color/darkred"
 	    android:textSize="20sp"
 	    android:width="33dp" />
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="6"
         android:minWidth="@dimen/activity_horizontal_margin"
-        android:text="Type d&apos;examen"
+        android:text="@string/libelleCol2Subject"
         android:textColor="@color/darkred"
         android:textSize="20sp"
         android:width="10dp" />
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:minWidth="@dimen/activity_horizontal_margin"
-        android:text="Coefficient"
+        android:text="@string/libelleCol3Subject"
         android:textColor="@color/darkred"
         android:textSize="20sp"
         android:width="10dp" />

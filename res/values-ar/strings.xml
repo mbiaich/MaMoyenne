@@ -60,5 +60,11 @@
     <string name="searchButton">بحث</string>
     <string name="searchNoResultSubject">لا مادة</string>
     <string name="searchNoResultMark">لا ملاحظات</string>
+    <string name="libelleCol1Subject">اسم المادي</string>
+    <string name="libelleCol2Subject">درجة</string>
+    <string name="libelleCol3Subject">متوسط</string>
+    <string name="libelleCol1Mark">ملاحظة</string>
+    <string name="libelleCol2Mark">مشاركة النوع</string>
+    <string name="libelleCol3Mark">درجة</string>
 
 </resources>

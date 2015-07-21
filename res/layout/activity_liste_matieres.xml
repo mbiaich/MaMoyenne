@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="5"
         android:minWidth="@dimen/activity_horizontal_margin"
-        android:text="Nom Matière"
+        android:text="@string/libelleCol1Mark"
         android:textColor="@color/darkred"
         android:textSize="18sp"
         android:width="33dp" />
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:minWidth="@dimen/activity_horizontal_margin"
-        android:text="Coefficient"
+        android:text="@string/libelleCol2Mark"
         android:textColor="@color/darkred"
         android:textSize="18sp"
         android:width="10dp" />
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:minWidth="@dimen/activity_horizontal_margin"
-        android:text="Moyenne"
+        android:text="@string/libelleCol3Mark"
         android:textColor="@color/darkred"
         android:textSize="18sp"
         android:width="10dp" />
