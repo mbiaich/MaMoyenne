@@ -32,8 +32,8 @@
             android:id="@+id/typeNoteAChercher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="7"            
-            android:ems="10" >
+            android:layout_weight="7"
+            android:ems="10">
 
             <requestFocus />
         </EditText>
@@ -86,7 +86,7 @@
         android:textSize="20sp"
         android:width="10dp" />
 
-</LinearLayout>
+	</LinearLayout>
         
         <ListView
             android:id="@android:id/list"

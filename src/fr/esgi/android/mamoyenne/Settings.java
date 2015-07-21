@@ -79,8 +79,10 @@ public class Settings extends Activity {
 		Configuration conf = res.getConfiguration();
 		conf.locale = myLocale;
 		res.updateConfiguration(conf, dm);
-		Intent refresh = new Intent(this, Settings.class);
-		startActivity(refresh);
+		finish();
+		Intent i = new Intent(this, MainActivity.class);
+		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);		
+		startActivity(i);
 	}
 
 	public void annulerModificationLangue(View v) {

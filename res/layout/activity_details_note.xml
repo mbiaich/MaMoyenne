@@ -16,7 +16,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="@string/markDetails"
+            android:text=""
             android:textAppearance="@style/LabelTitles" />
 
         <TextView

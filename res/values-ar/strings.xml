@@ -49,14 +49,13 @@
     <string name="actionAbout">حول</string>
     <string name="start">الصفحة الرئيسية</string>
     <string name="settings">الإعدادات</string>
-
+	<string name="export">ملاحظات تصدير</string>
     <string-array name="languages">
-        <item>Select language</item>
-        <item>English</item>
-        <item>Francais</item>
-        <item>Arabic</item>
-    </string-array>
-    
+        <item>اختار اللغة</item>
+        <item>الإنجليزية</item>
+        <item>فرنسي</item>
+        <item>العربية</item>
+    </string-array>   
     <string name="searchButton">بحث</string>
     <string name="searchNoResultSubject">لا مادة</string>
     <string name="searchNoResultMark">لا ملاحظات</string>
@@ -66,5 +65,6 @@
     <string name="libelleCol1Mark">ملاحظة</string>
     <string name="libelleCol2Mark">مشاركة النوع</string>
     <string name="libelleCol3Mark">درجة</string>
+    <string name="txtSearchMark">إدخال نوع من المذكرة</string>
 
 </resources>

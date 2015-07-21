@@ -48,7 +48,7 @@
  	<string name="actionAbout">A propos</string>
  	<string name="start">Accueil</string>
  	<string name="settings">Parametres</string>
- 	<string name="export">Exporter</string>
+ 	<string name="export">Exporter Notes</string>
  	<string-array name="languages">
         <item>Select language</item>
         <item>English</item>
@@ -64,4 +64,5 @@
     <string name="libelleCol1Mark">Note</string>
     <string name="libelleCol2Mark">Type d\'examen</string>
     <string name="libelleCol3Mark">Coefficient</string>
+    <string name="txtSearchMark">Saisir le type de note</string>
 </resources>
