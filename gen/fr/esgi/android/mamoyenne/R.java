@@ -53,9 +53,10 @@ public final class R {
         public static final int ic_action_remove=0x7f020008;
         public static final int ic_action_settings=0x7f020009;
         public static final int ic_launcher=0x7f02000a;
-        public static final int red_button=0x7f02000b;
-        public static final int section_header=0x7f02000c;
-        public static final int textview_round=0x7f02000d;
+        public static final int ic_launcher_persqo=0x7f02000b;
+        public static final int red_button=0x7f02000c;
+        public static final int section_header=0x7f02000d;
+        public static final int textview_round=0x7f02000e;
     }
     public static final class id {
         public static final int ac_accueil=0x7f0a002a;

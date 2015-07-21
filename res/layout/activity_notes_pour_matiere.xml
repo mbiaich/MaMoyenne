@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="5dp"
-        android:paddingTop="5dp" >
+        android:paddingTop="5dp">
 
         <EditText
             android:id="@+id/typeNoteAChercher"
@@ -46,7 +46,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content" 
+        android:background="#000" >
 
         <TextView
             android:id="@+id/txt_row_liste_note"
@@ -55,7 +56,7 @@
             android:layout_weight="2"
             android:minWidth="@dimen/activity_horizontal_margin"
             android:text="@string/libelleCol1Mark"
-            android:textColor="@color/darkred"
+            android:textColor="#FFF"
             android:textSize="18sp"
             android:width="33dp" />
 
@@ -66,7 +67,7 @@
             android:layout_weight="6"
             android:minWidth="@dimen/activity_horizontal_margin"
             android:text="@string/libelleCol2Mark"
-            android:textColor="@color/darkred"
+            android:textColor="#FFF"
             android:textSize="18sp"
             android:width="10dp" />
 
@@ -77,7 +78,7 @@
             android:layout_weight="2"
             android:minWidth="@dimen/activity_horizontal_margin"
             android:text="@string/libelleCol3Mark"
-            android:textColor="@color/darkred"
+            android:textColor="#FFF"
             android:textSize="18sp"
             android:width="10dp" />
     </LinearLayout>

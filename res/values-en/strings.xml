@@ -59,11 +59,11 @@
     <string name="searchNoResultSubject">Field Not Found</string>
     <string name="searchNoResultMark">Marks Not Found</string>
     <string name="libelleCol1Subject">Name field</string>
-    <string name="libelleCol2Subject">Coefficient</string>
+    <string name="libelleCol2Subject">Coeff</string>
     <string name="libelleCol3Subject">Average</string>
     <string name="libelleCol1Mark">Mark</string>
     <string name="libelleCol2Mark">Type review</string>
-    <string name="libelleCol3Mark">Coefficient</string>
+    <string name="libelleCol3Mark">Coeff</string>
     <string name="txtSearchMark">Enter type of Mark</string>
 
 </resources>
