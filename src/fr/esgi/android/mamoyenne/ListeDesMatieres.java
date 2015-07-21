@@ -119,11 +119,9 @@ public class ListeDesMatieres extends ListActivity {
 					new OnClickListener() {
 
 						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							Intent i = new Intent(ListeDesMatieres.this,
-									ListeDesMatieres.class);
+						public void onClick(DialogInterface dialog, int which) {						
 							matiereDao.deleteMatiere(m.getIdMatiere());
-							startActivity(i);
+							refresh();
 							Toast.makeText(getApplicationContext(),
 									getString(R.string.deleteFieldToast),
 									Toast.LENGTH_LONG).show();

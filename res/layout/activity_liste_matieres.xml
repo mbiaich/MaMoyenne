@@ -26,7 +26,9 @@
         <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="horizontal" >
+        android:orientation="horizontal" 
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
         
         <EditText
             android:id="@+id/matiereAChercher"

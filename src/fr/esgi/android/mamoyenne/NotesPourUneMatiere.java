@@ -190,12 +190,9 @@ public class NotesPourUneMatiere extends ListActivity {
 					new OnClickListener() {
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
-							noteDao.deleteNote(n.getIdNote());
-							Intent i = new Intent(NotesPourUneMatiere.this,
-									NotesPourUneMatiere.class);
-							i.putExtra("idMatiere", n.getIdMatiere());
-							startActivity(i);
-
+							finish();
+							noteDao.deleteNote(n.getIdNote());							
+							refresh();
 							Toast.makeText(getApplicationContext(),
 									getString(R.string.deletedMark),
 									Toast.LENGTH_LONG).show();
